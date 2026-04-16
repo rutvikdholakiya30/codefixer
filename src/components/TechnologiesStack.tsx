@@ -76,7 +76,7 @@ const techData = [
     borderColor: "border-t-rose-400",
     techs: [
       { name: "Figma", icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
-      { name: "Adobe XD", icon: "https://www.vectorlogo.zone/logos/adobe_xd/adobe_xd-icon.svg" },
+      { name: "Adobe XD", icon: "https://www.techvardha.com/Images/icons/tech/xd.svg" },
       { name: "Sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
       { name: "Webflow", icon: "https://www.vectorlogo.zone/logos/webflow/webflow-icon.svg" },
     ]
@@ -87,8 +87,8 @@ const techData = [
     borderColor: "border-t-yellow-400",
     techs: [
       { name: "Google Analytics", icon: "https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg" },
-      { name: "SEO", icon: "https://www.svgrepo.com/show/354324/seo.svg" },
-      { name: "Meta Ads", icon: "https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg" },
+      { name: "SEO", icon: "https://www.techvardha.com/Images/icons/analytics/search-console.svg" },
+      { name: "Meta Ads", icon: "https://www.techvardha.com/Images/icons/tech/meta.svg" },
     ]
   }
 ];
