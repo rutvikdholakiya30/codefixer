@@ -79,9 +79,9 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="pb-24">
+    <div className="pb-16">
       {/* Page Header */}
-      <section className="py-32 px-6 relative overflow-hidden text-center">
+      <section className="py-20 px-6 relative overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-blue opacity-30 -z-10" />
         <div className="max-w-7xl mx-auto relative z-10 space-y-6">
           <motion.div
@@ -113,7 +113,7 @@ export default function Services() {
       </section>
 
       {/* Services List */}
-      <section className="py-24 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {services.map((service, i) => (
@@ -146,8 +146,15 @@ export default function Services() {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <Button asChild size="lg" className="w-full rounded-full bg-primary text-black hover:bg-primary/90">
-                    <Link to="/contact">Inquiry Now</Link>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full rounded-full bg-primary text-black shadow-[0_20px_60px_rgba(79,70,229,0.24)] transition hover:bg-primary/90"
+                  >
+                    <Link to="/contact" className="inline-flex items-center justify-center gap-3">
+                      Inquiry Now
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
                   </Button>
                 </div>
               </motion.div>
