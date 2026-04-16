@@ -1,116 +1,8 @@
 import { motion } from 'motion/react';
-import {
-  ArrowRight,
-  Atom,
-  Box,
-  Cloud,
-  Code2,
-  Cpu,
-  Database,
-  GitBranch,
-  Globe,
-  Layers,
-  Shield,
-  ShieldCheck,
-  Sparkles,
-  Smartphone,
-  Terminal,
-  Zap
-} from 'lucide-react';
+import { Cpu, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
-const techStack = [
-  {
-    category: 'Frontend',
-    count: '6 Techs',
-    subtitle: 'Modern user interfaces and interactive web applications.',
-    icon: Globe,
-    accent: 'from-sky-500 to-cyan-500',
-    color: 'text-sky-300',
-    techs: [
-      { name: 'React', icon: Atom },
-      { name: 'Angular', icon: Shield },
-      { name: 'Vue', icon: Layers },
-      { name: 'Next.js', icon: ArrowRight },
-      { name: 'WordPress', icon: Box },
-      { name: 'Wix', icon: Sparkles }
-    ]
-  },
-  {
-    category: 'Backend',
-    count: '6 Techs',
-    subtitle: 'Robust server-side solutions and APIs.',
-    icon: Layers,
-    accent: 'from-violet-500 to-fuchsia-500',
-    color: 'text-violet-300',
-    techs: [
-      { name: 'Node.js', icon: Cpu },
-      { name: '.NET', icon: Terminal },
-      { name: 'Laravel', icon: Layers },
-      { name: 'Express', icon: Zap },
-      { name: 'Django', icon: Database },
-      { name: 'Shopify', icon: Box }
-    ]
-  },
-  {
-    category: 'Database',
-    count: '5 Techs',
-    subtitle: 'Data storage and management solutions.',
-    icon: Database,
-    accent: 'from-emerald-500 to-teal-500',
-    color: 'text-emerald-300',
-    techs: [
-      { name: 'MongoDB', icon: Database },
-      { name: 'PostgreSQL', icon: Database },
-      { name: 'MS SQL', icon: Database },
-      { name: 'Firebase', icon: Zap },
-      { name: 'Supabase', icon: Cloud }
-    ]
-  },
-  {
-    category: 'Mobile',
-    count: '4 Techs',
-    subtitle: 'Cross-platform and native mobile applications.',
-    icon: Smartphone,
-    accent: 'from-orange-500 to-amber-500',
-    color: 'text-orange-300',
-    techs: [
-      { name: 'Flutter', icon: Smartphone },
-      { name: 'React Native', icon: Code2 },
-      { name: 'Swift', icon: Sparkles },
-      { name: 'Kotlin', icon: ArrowRight }
-    ]
-  },
-  {
-    category: 'Cloud',
-    count: '4 Techs',
-    subtitle: 'Scalable cloud infrastructure and services.',
-    icon: Cloud,
-    accent: 'from-cyan-500 to-sky-500',
-    color: 'text-cyan-300',
-    techs: [
-      { name: 'AWS', icon: Cloud },
-      { name: 'Azure', icon: Cloud },
-      { name: 'GCP', icon: Cloud },
-      { name: 'DigitalOcean', icon: Cloud }
-    ]
-  },
-  {
-    category: 'DevOps',
-    count: '4 Techs',
-    subtitle: 'Automation, deployment, and infrastructure management.',
-    icon: GitBranch,
-    accent: 'from-slate-500 to-slate-400',
-    color: 'text-slate-300',
-    techs: [
-      { name: 'Docker', icon: Box },
-      { name: 'Kubernetes', icon: Layers },
-      { name: 'CI/CD', icon: Zap },
-      { name: 'GitHub Actions', icon: GitBranch }
-    ]
-  }
-];
+import TechnologiesStack from '../components/TechnologiesStack';
 
 const features = [
   {
@@ -122,13 +14,13 @@ const features = [
   {
     title: 'Security First',
     description: 'Every solution includes secure-by-design best practices and ongoing protection.',
-    icon: ShieldCheck,
+    icon: Sparkles,
     accent: 'from-emerald-500 to-teal-500'
   },
   {
     title: 'Performance Optimized',
     description: 'Fast load times, reliable APIs, and scalable infrastructure for every product.',
-    icon: Zap,
+    icon: Sparkles,
     accent: 'from-sky-500 to-cyan-500'
   }
 ];
@@ -192,48 +84,7 @@ export default function Technologies() {
         </div>
       </section>
 
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto grid gap-8 lg:grid-cols-3">
-          {techStack.map((item, i) => (
-            <motion.div
-              key={item.category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-950/95 p-8 shadow-[0_35px_80px_rgba(0,0,0,0.25)] transition hover:-translate-y-2 hover:border-white/20"
-            >
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-white/0 to-white/30" />
-              <div className="relative z-10 flex items-start justify-between gap-4">
-                <div className={`inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br ${item.accent} text-white shadow-lg`}>
-                  <item.icon className="h-7 w-7" />
-                </div>
-                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/70">
-                  {item.count}
-                </span>
-              </div>
-              <div className="mt-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/50">{item.category}</p>
-                <h3 className={`mt-4 text-2xl font-bold ${item.color}`}>{item.subtitle}</h3>
-              </div>
-
-              <div className="mt-8 grid gap-3 grid-cols-2 sm:grid-cols-3">
-                {item.techs.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="group flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-white/20 hover:bg-white/10"
-                  >
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white/80 transition group-hover:bg-white/15">
-                      <tech.icon className="h-5 w-5" />
-                    </span>
-                    <span className="text-sm font-medium text-white/90">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <TechnologiesStack />
 
       <section className="py-20 px-6 bg-slate-950/90">
         <div className="max-w-7xl mx-auto grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center">
