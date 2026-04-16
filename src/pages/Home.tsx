@@ -121,10 +121,18 @@ const processSteps = [
 ];
 
 const testimonials = [
+  {
+    name: 'Mylana',
+    role: 'Pomeranian Scanty Poland • POLAND',
     content: 'Highly recommend CodeFixer IT Solutions! They are extremely detail-oriented and super skillful. They delivered everything exactly as promised and even ensured everything was done with precision and professionalism. Thank you for your excellent work!',
+    avatar: 'https://picsum.photos/seed/person1/100/100',
     rating: 5
   },
+  {
+    name: 'SK Smisra',
+    role: 'Supervity.ai • INDIA',
     content: 'I engaged CodeFixer IT Solutions for both frontend development and technical support (React JS / JavaScript). Their team delivered exceptional results, combining strong technical expertise, clean and scalable code, and clear communication throughout the process. They also handled the external technical interview professionally, providing detailed insights and recommendations. Overall, CodeFixer proved to be reliable, skilled, and highly professional in every aspect of the engagement.',
+    avatar: 'https://picsum.photos/seed/person2/100/100',
     rating: 5
   },
   {
@@ -148,7 +156,11 @@ const testimonials = [
     avatar: 'https://picsum.photos/seed/person5/100/100',
     rating: 5
   },
+  {
+    name: 'Syed Jazib',
+    role: 'Microsoft LLC • UAE',
     content: 'I had the pleasure of working with CodeFixer IT Solutions, an outstanding team. They consistently demonstrated exceptional skill, dedication, and professionalism. Their expertise in both front-end and back-end development, along with their innovative problem-solving abilities, greatly contributed to our project\'s success. I highly recommend CodeFixer IT Solutions for any development.',
+    avatar: 'https://picsum.photos/seed/person6/100/100',
     rating: 5
   }
 ];
