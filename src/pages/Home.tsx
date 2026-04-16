@@ -1,0 +1,627 @@
+import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Code, 
+  Smartphone, 
+  Globe, 
+  Search, 
+  Palette, 
+  Megaphone, 
+  Gamepad2,
+  CheckCircle2,
+  Users,
+  Zap,
+  ShieldCheck,
+  Star,
+  Sparkles,
+  Rocket,
+  Calendar,
+  Award,
+  TrendingUp,
+  Brain,
+  Bot,
+  Cpu,
+  LineChart,
+  MessageSquare,
+  Activity,
+  Heart,
+  Mail,
+  Check,
+  Layout,
+  MousePointer2,
+  Terminal,
+  SearchCode,
+  Settings,
+  Headphones,
+  Target,
+  Phone
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+
+const services = [
+  {
+    title: 'Software Development',
+    description: 'We build robust, scalable, and high-performance software solutions tailored to your business needs.',
+    icon: Code,
+    color: 'bg-blue-600',
+  },
+  {
+    title: 'Web Development',
+    description: 'Creating modern, responsive, and SEO-friendly websites that deliver exceptional user experiences.',
+    icon: Globe,
+    color: 'bg-cyan-600',
+  },
+  {
+    title: 'App Development',
+    description: 'Custom mobile applications for iOS and Android with seamless functionality and intuitive design.',
+    icon: Smartphone,
+    color: 'bg-indigo-600',
+  },
+  {
+    title: 'Digital Marketing',
+    description: 'Strategic online marketing campaigns to enhance your brand visibility and drive conversions.',
+    icon: Megaphone,
+    color: 'bg-purple-600',
+  },
+  {
+    title: 'SEO Optimization',
+    description: 'Optimizing your digital presence to rank higher on search engines and attract organic traffic.',
+    icon: Search,
+    color: 'bg-pink-600',
+  },
+  {
+    title: 'IT Consulting',
+    description: 'Expert guidance and strategic planning to help you leverage technology for business success.',
+    icon: ShieldCheck,
+    color: 'bg-orange-600',
+  },
+];
+
+const reasons = [
+  {
+    title: 'Expert Team',
+    description: 'Highly skilled professionals with years of industry experience.',
+    icon: Users,
+  },
+  {
+    title: 'Fast Delivery',
+    description: 'Efficient workflows ensuring timely completion of your projects.',
+    icon: Zap,
+  },
+  {
+    title: 'Secure Solutions',
+    description: 'Robust security measures to protect your data and users.',
+    icon: ShieldCheck,
+  },
+  {
+    title: '24/7 Support',
+    description: 'Dedicated support team ready to assist you whenever needed.',
+    icon: CheckCircle2,
+  },
+];
+
+const aboutFeatures = [
+  { icon: Layout, label: 'Modern UI/UX design' },
+  { icon: MousePointer2, label: 'Scalable architecture design' },
+  { icon: Terminal, label: 'Agile development methodology' },
+  { icon: SearchCode, label: 'Quality assurance & testing' },
+  { icon: Settings, label: 'End-to-end project management' },
+  { icon: Headphones, label: 'Post-deployment support' },
+];
+
+const processSteps = [
+  { number: '01', title: 'Discovery & Strategy', description: 'We analyze your requirements and craft a comprehensive roadmap for success.', icon: Search },
+  { number: '02', title: 'Design & Planning', description: 'Creating intuitive designs and robust architecture for your solution.', icon: Palette },
+  { number: '03', title: 'Development & Build', description: 'Building your solution using cutting-edge technologies and best practices.', icon: Code },
+  { number: '04', title: 'Testing & Quality', description: 'Rigorous testing ensures the highest standards of performance and reliability.', icon: ShieldCheck },
+  { number: '05', title: 'Launch & Deploy', description: 'Seamless deployment with monitoring and optimization for peak performance.', icon: Rocket },
+  { number: '06', title: 'Support & Growth', description: 'Ongoing support and enhancements to ensure continued success.', icon: Headphones },
+];
+
+const testimonials = [
+  {
+    name: 'Mylana',
+    role: 'Pomeranian Scanty Poland • POLAND',
+    content: 'Highly recommend Tech Vardha IT Solutions! They are extremely detail-oriented and super skillful. They delivered everything exactly as promised and even ensured everything was done with precision and professionalism. Thank you for your excellent work!',
+    avatar: 'https://picsum.photos/seed/person1/100/100',
+    rating: 5
+  },
+  {
+    name: 'SK Smisra',
+    role: 'Supervity.ai • INDIA',
+    content: 'I engaged Tech Vardha IT Solutions for both frontend development and technical support (React JS / JavaScript). Their team delivered exceptional results, combining strong technical expertise, clean and scalable code, and clear communication throughout the process. They also handled the external technical interview professionally, providing detailed insights and recommendations. Overall, Tech Vardha proved to be reliable, skilled, and highly professional in every aspect of the engagement.',
+    avatar: 'https://picsum.photos/seed/person2/100/100',
+    rating: 5
+  },
+  {
+    name: 'Shanthan',
+    role: 'Senior Developer • USA',
+    content: 'I recently hired to help with project. From the start, they were incredibly efficient and professional. They delivered high-quality work ahead of schedule and were very responsive to my questions and feedback. I was particularly impressed with their efficiency, turnaround time, and ability to understand the project requirements quickly. I would definitely recommend for anyone looking for a skilled and reliable developer or team.',
+    avatar: 'https://picsum.photos/seed/person3/100/100',
+    rating: 5
+  },
+  {
+    name: 'Anush',
+    role: 'All Cables • INDIA',
+    content: 'They are wonderful team to work with - especially being available almost most of the time and offering support beyond what I was been requested. Way to go!',
+    avatar: 'https://picsum.photos/seed/person4/100/100',
+    rating: 5
+  },
+  {
+    name: 'Krunal J.',
+    role: 'Kodiness IT • INDIA',
+    content: 'Exceptional Team Effort! I\'m truly impressed by the dedication, expertise, and professionalism of the team. Their timely delivery, innovative solutions, and clear communication made the project a great success. Grateful to have worked with such a talented and collaborative team. Rating: 5/5',
+    avatar: 'https://picsum.photos/seed/person5/100/100',
+    rating: 5
+  },
+  {
+    name: 'Syed Jazib',
+    role: 'Microsoft LLC • UAE',
+    content: 'I had the pleasure of working with Tech Vardha IT Solutions, an outstanding team. They consistently demonstrated exceptional skill, dedication, and professionalism. Their expertise in both front-end and back-end development, along with their innovative problem-solving abilities, greatly contributed to our project\'s success. I highly recommend Tech Vardha IT Solutions for any development.',
+    avatar: 'https://picsum.photos/seed/person6/100/100',
+    rating: 5
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export default function Home() {
+  return (
+    <div className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20 text-center">
+        {/* Background Glows */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-[10%] left-[5%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute top-[20%] right-[10%] w-[35%] h-[35%] bg-purple-600/20 rounded-full blur-[120px] animate-pulse delay-700" />
+          <div className="absolute bottom-[10%] left-[20%] w-[30%] h-[30%] bg-pink-600/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+        </div>
+
+        <div className="max-w-5xl mx-auto space-y-10 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold uppercase tracking-widest"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+            <span>Next-Generation IT Solutions</span>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-6xl md:text-8xl font-black font-heading leading-[1.1] tracking-tight"
+          >
+            Transform Your <br />
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Digital Future
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed font-medium"
+          >
+            We craft exceptional web, mobile, and cloud solutions that propel your business into the digital age with cutting-edge technologies and innovative approaches.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-5 pt-4"
+          >
+            <Button asChild size="lg" className="rounded-full px-10 h-14 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base shadow-xl shadow-indigo-500/20">
+              <Link to="/contact">
+                <span className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 mr-1" />
+                  Schedule a Meeting
+                </span>
+                <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full px-10 h-14 border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-base backdrop-blur-sm">
+              <Link to="/portfolio">View Our Work</Link>
+            </Button>
+          </motion.div>
+
+          {/* Hero Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-20"
+          >
+            {[
+              { icon: Code, label: 'Modern Technologies' },
+              { icon: Zap, label: 'Lightning Fast' },
+              { icon: Star, label: 'Expert Team' },
+              { icon: Rocket, label: 'Scalable Solutions' },
+            ].map((feature, i) => (
+              <div key={i} className="flex flex-col items-center gap-4 group">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/10 group-hover:border-indigo-500/30 transition-all duration-500">
+                  <feature.icon className="w-6 h-6" />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">
+                  {feature.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold"
+              >
+                <Users className="w-3.5 h-3.5 text-primary" />
+                <span>About Us</span>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-5xl md:text-7xl font-black font-heading tracking-tight"
+              >
+                Empowering <br />
+                <span className="text-white/90">Your Digital Journey</span>
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-lg text-white/40 leading-relaxed"
+              >
+                We are a team of passionate technologists dedicated to transforming businesses through innovative IT solutions.
+              </motion.p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {aboutFeatures.map((feature, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 p-4 glass rounded-2xl border-white/5 group hover:border-primary/30 transition-all"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                      <feature.icon className="w-4 h-4" />
+                    </div>
+                    <span className="text-xs font-bold text-white/70">{feature.label}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Button asChild size="lg" className="rounded-full px-10 h-14 border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold text-base backdrop-blur-sm">
+                <Link to="/about">Learn More About Us</Link>
+              </Button>
+            </div>
+
+            <div className="grid gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="p-10 glass rounded-[3rem] border-white/5 space-y-6 relative group overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl group-hover:bg-primary/20 transition-all" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Target className="w-8 h-8" />
+                </div>
+                <h3 className="text-3xl font-bold font-heading">Our Mission</h3>
+                <p className="text-white/40 leading-relaxed">
+                  To deliver innovative IT solutions that transform businesses and drive digital success.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="p-8 glass rounded-[2.5rem] border-white/5 space-y-4 group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-primary transition-colors">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-xl font-bold font-heading">Expert Team</h4>
+                  <p className="text-white/40 text-xs leading-relaxed">
+                    Skilled professionals with extensive experience in modern technologies and frameworks.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="p-8 glass rounded-[2.5rem] border-white/5 space-y-4 group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-primary transition-colors">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-xl font-bold font-heading">Innovation</h4>
+                  <p className="text-white/40 text-xs leading-relaxed">
+                    We stay ahead of technology trends to provide cutting-edge solutions for our clients.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center space-y-6 mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold"
+            >
+              <Settings className="w-3.5 h-3.5 text-primary" />
+              <span>Our Process</span>
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-5xl md:text-7xl font-black font-heading tracking-tight"
+            >
+              From Concept to <br />
+              <span className="text-white/90">Reality</span>
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-lg text-white/40 max-w-2xl mx-auto font-medium"
+            >
+              Our proven methodology ensures every project is delivered with precision and excellence.
+            </motion.p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {processSteps.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group p-10 glass rounded-[2.5rem] border-white/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 p-8 text-6xl font-black text-white/5 group-hover:text-primary/10 transition-colors">
+                  {step.number}
+                </div>
+                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white/60 mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <step.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-2xl font-bold font-heading mb-4">{step.title}</h3>
+                <p className="text-white/40 text-sm leading-relaxed">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center space-y-6 mb-20">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl md:text-7xl font-black font-heading tracking-tight"
+            >
+              What Our <span className="text-primary">Clients Say</span>
+            </motion.h2>
+            <p className="text-lg text-white/40 max-w-2xl mx-auto font-medium">
+              Real stories from businesses we've helped transform.
+            </p>
+          </div>
+
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            {testimonials.map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="break-inside-avoid p-8 glass rounded-3xl border-white/5 hover:border-primary/30 transition-all group"
+              >
+                <div className="flex gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, j) => (
+                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-white/70 text-sm leading-relaxed mb-8 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name} 
+                    className="w-12 h-12 rounded-full border-2 border-primary/20"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div>
+                    <h4 className="font-bold text-white">{testimonial.name}</h4>
+                    <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto p-12 md:p-20 glass rounded-[4rem] border-white/10 text-center space-y-10 relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-black font-heading tracking-tight relative z-10"
+          >
+            Ready to Transform <br />
+            <span className="text-gradient">Your Vision?</span>
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-white/60 max-w-2xl mx-auto font-medium relative z-10"
+          >
+            Let's collaborate to bring your ideas to life with innovative technology solutions that drive real business results.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-wrap justify-center gap-6 relative z-10"
+          >
+            <Button asChild size="lg" className="rounded-full px-12 h-16 bg-white text-black hover:bg-white/90 font-bold text-lg shadow-2xl shadow-white/10">
+              <Link to="/contact">Start Your Project</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full px-12 h-16 border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-lg backdrop-blur-sm">
+              <Link to="/portfolio">View Portfolio</Link>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col md:flex-row justify-center gap-8 pt-10 relative z-10"
+          >
+            <div className="flex items-center justify-center gap-4 group/item">
+              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover/item:text-primary transition-colors">
+                <Phone className="w-5 h-5" />
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">Call Us</p>
+                <p className="text-lg font-bold text-white">+91 75748 89909</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-4 group/item">
+              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 group-hover/item:text-primary transition-colors">
+                <Mail className="w-5 h-5" />
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">Email Us</p>
+                <p className="text-lg font-bold text-white">contact@techvardha.com</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center space-y-12">
+          <div className="space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold"
+            >
+              <Mail className="w-3.5 h-3.5 text-primary" />
+              <span>Newsletter</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl font-black font-heading tracking-tight"
+            >
+              Stay Updated with <span className="text-primary">Tech Vardha</span>
+            </motion.h2>
+            <p className="text-white/40 max-w-xl mx-auto font-medium">
+              Get the latest tech insights, project updates, and exclusive offers delivered to your inbox.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto relative group"
+          >
+            <div className="flex flex-col md:flex-row gap-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="flex-grow h-16 rounded-full bg-white/5 border border-white/10 px-8 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-all"
+              />
+              <Button size="lg" className="rounded-full px-10 h-16 bg-primary hover:bg-primary/90 text-white font-bold text-lg">
+                Subscribe
+              </Button>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 pt-8">
+              {[
+                'Weekly tech insights',
+                'Exclusive offers',
+                'No spam, unsubscribe anytime'
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40">
+                  <Check className="w-3 h-3 text-primary" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
