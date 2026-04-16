@@ -209,7 +209,6 @@ export default function About() {
           <p className="text-white/80 max-w-xl mx-auto font-medium relative z-10 text-lg">Let's collaborate to bring your ideas to life with innovative technology solutions that drive real business results.</p>
           <div className="flex justify-center gap-4 relative z-10">
             <button className="px-10 py-5 bg-white text-black rounded-2xl font-black hover:scale-105 transition-all shadow-xl">Start Your Project</button>
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl font-black hover:bg-white/20 transition-all">View Portfolio</button>
           </div>
         </div>
       </section>

@@ -195,9 +195,7 @@ export default function Home() {
                 <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-10 h-14 border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-base backdrop-blur-sm">
-              <Link to="/portfolio">View Our Work</Link>
-            </Button>
+
           </motion.div>
 
           {/* Hero Features */}
@@ -435,9 +433,6 @@ export default function Home() {
           >
             <Button asChild size="lg" className="rounded-full px-12 h-16 bg-white text-black hover:bg-white/90 font-bold text-lg shadow-2xl shadow-white/10">
               <Link to="/contact">Start Your Project</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-12 h-16 border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-lg backdrop-blur-sm">
-              <Link to="/portfolio">View Portfolio</Link>
             </Button>
           </motion.div>
 

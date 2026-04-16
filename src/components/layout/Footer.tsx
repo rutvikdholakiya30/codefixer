@@ -34,7 +34,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Company</h4>
           <ul className="space-y-4 text-sm font-medium">
-            {['About', 'Services', 'Technologies', 'Portfolio', 'Contact'].map((item) => (
+            {['About', 'Services', 'Technologies', 'Contact'].map((item) => (
               <li key={item}>
                 <Link to={`/${item.toLowerCase()}`} className="hover:text-primary transition-colors flex items-center gap-2 group">
                   <div className="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
