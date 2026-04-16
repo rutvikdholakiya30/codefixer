@@ -108,49 +108,45 @@ export default function Services() {
 
       {/* Services List */}
       <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto space-y-32">
-          {services.map((service, i) => (
-            <motion.div 
-              key={service.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className={`flex flex-col ${i % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 items-center`}
-            >
-              <div className="flex-1 space-y-8">
-                <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center text-white shadow-xl`}>
-                  <service.icon className="w-8 h-8" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+            {services.map((service, i) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.05 }}
+                className="group rounded-[2.5rem] border border-white/10 bg-white/5 p-8 shadow-[0_25px_70px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_35px_90px_rgba(79,70,229,0.24)]"
+              >
+                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-inner">
+                  <div className={`${service.color} flex h-12 w-12 items-center justify-center rounded-3xl text-white shadow-lg`}>
+                    <service.icon className="w-6 h-6" />
+                  </div>
                 </div>
-                <h2 className="text-4xl font-bold font-heading">{service.title}</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
-                      <span className="font-medium">{benefit}</span>
-                    </div>
-                  ))}
+                <div className="mt-8 space-y-6">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.4em] text-primary/90">Service</p>
+                    <h3 className="mt-4 text-2xl font-bold text-white">{service.title}</h3>
+                  </div>
+                  <p className="text-sm leading-7 text-white/70">{service.description}</p>
+                  <div className="grid gap-3">
+                    {service.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80 transition group-hover:bg-white/10">
+                        <CheckCircle2 className="h-4 w-4 text-primary" />
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <Button asChild size="lg" className="rounded-full px-8">
-                  <Link to="/contact">Inquire Now <ArrowRight className="ml-2 w-5 h-5" /></Link>
-                </Button>
-              </div>
-              <div className="flex-1 w-full">
-                <div className="relative group">
-                  <div className={`absolute inset-0 ${service.color} opacity-10 rounded-[2.5rem] blur-3xl group-hover:opacity-20 transition-opacity`} />
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="relative z-10 w-full h-auto rounded-[2.5rem] shadow-2xl border border-white/20"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="mt-8">
+                  <Button asChild size="lg" className="w-full rounded-full bg-primary text-black hover:bg-primary/90">
+                    <Link to="/contact">Inquiry Now</Link>
+                  </Button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
