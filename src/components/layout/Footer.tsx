@@ -104,9 +104,14 @@ export default function Footer() {
         </div>
       </div>
 
-        <p className="text-xs font-medium">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
-          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+      {/* Footer Bottom Section */}
+      <div className="max-w-7xl mx-auto pt-12 border-t border-white/5">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-xs font-medium">&copy; {new Date().getFullYear()} Tech Vardha. All rights reserved.</p>
+          <div className="flex gap-8">
+            <Link to="/privacy" className="text-xs font-medium hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-xs font-medium hover:text-white transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>
