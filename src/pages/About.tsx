@@ -43,10 +43,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold uppercase tracking-widest"
-          >
-            <Users2 className="w-3.5 h-3.5 text-primary" />
-            <span>About Tech Vardha</span>
-          </motion.div>
+            <span>About CodeFixer</span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,9 +74,7 @@ export default function About() {
             className="space-y-8"
           >
             <h2 className="text-4xl font-bold font-heading">Our Journey of Innovation</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Founded in 2014, Tech Vardha started with a simple mission: to help businesses navigate the complex digital landscape with ease. Over the years, we have grown into a full-service IT agency, serving clients across the globe.
-            </p>
+              Founded in 2014, CodeFixer started with a simple mission: to help businesses navigate the complex digital landscape with ease. Over the years, we have grown into a full-service IT agency, serving clients across the globe.
             <p className="text-muted-foreground leading-relaxed">
               We believe in the power of technology to transform industries and improve lives. Our approach combines technical excellence with creative thinking to deliver results that exceed expectations.
             </p>

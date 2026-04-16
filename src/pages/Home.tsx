@@ -121,18 +121,10 @@ const processSteps = [
 ];
 
 const testimonials = [
-  {
-    name: 'Mylana',
-    role: 'Pomeranian Scanty Poland • POLAND',
-    content: 'Highly recommend Tech Vardha IT Solutions! They are extremely detail-oriented and super skillful. They delivered everything exactly as promised and even ensured everything was done with precision and professionalism. Thank you for your excellent work!',
-    avatar: 'https://picsum.photos/seed/person1/100/100',
+    content: 'Highly recommend CodeFixer IT Solutions! They are extremely detail-oriented and super skillful. They delivered everything exactly as promised and even ensured everything was done with precision and professionalism. Thank you for your excellent work!',
     rating: 5
   },
-  {
-    name: 'SK Smisra',
-    role: 'Supervity.ai • INDIA',
-    content: 'I engaged Tech Vardha IT Solutions for both frontend development and technical support (React JS / JavaScript). Their team delivered exceptional results, combining strong technical expertise, clean and scalable code, and clear communication throughout the process. They also handled the external technical interview professionally, providing detailed insights and recommendations. Overall, Tech Vardha proved to be reliable, skilled, and highly professional in every aspect of the engagement.',
-    avatar: 'https://picsum.photos/seed/person2/100/100',
+    content: 'I engaged CodeFixer IT Solutions for both frontend development and technical support (React JS / JavaScript). Their team delivered exceptional results, combining strong technical expertise, clean and scalable code, and clear communication throughout the process. They also handled the external technical interview professionally, providing detailed insights and recommendations. Overall, CodeFixer proved to be reliable, skilled, and highly professional in every aspect of the engagement.',
     rating: 5
   },
   {
@@ -156,11 +148,7 @@ const testimonials = [
     avatar: 'https://picsum.photos/seed/person5/100/100',
     rating: 5
   },
-  {
-    name: 'Syed Jazib',
-    role: 'Microsoft LLC • UAE',
-    content: 'I had the pleasure of working with Tech Vardha IT Solutions, an outstanding team. They consistently demonstrated exceptional skill, dedication, and professionalism. Their expertise in both front-end and back-end development, along with their innovative problem-solving abilities, greatly contributed to our project\'s success. I highly recommend Tech Vardha IT Solutions for any development.',
-    avatar: 'https://picsum.photos/seed/person6/100/100',
+    content: 'I had the pleasure of working with CodeFixer IT Solutions, an outstanding team. They consistently demonstrated exceptional skill, dedication, and professionalism. Their expertise in both front-end and back-end development, along with their innovative problem-solving abilities, greatly contributed to our project\'s success. I highly recommend CodeFixer IT Solutions for any development.',
     rating: 5
   }
 ];
@@ -583,9 +571,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-4xl md:text-6xl font-black font-heading tracking-tight"
-            >
-              Stay Updated with <span className="text-primary">Tech Vardha</span>
-            </motion.h2>
+              Stay Updated with <span className="text-primary">CodeFixer</span>
             <p className="text-white/40 max-w-xl mx-auto font-medium">
               Get the latest tech insights, project updates, and exclusive offers delivered to your inbox.
             </p>

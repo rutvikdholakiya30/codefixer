@@ -143,9 +143,7 @@ export default function Contact() {
             style={{ border: 0 }} 
             allowFullScreen 
             loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Tech Vardha Office Location"
-          ></iframe>
+            title="CodeFixer Office Location"
         </div>
       </section>
 
