@@ -20,54 +20,60 @@ const services = [
     title: 'Software Development',
     description: 'We build robust, scalable, and high-performance software solutions tailored to your business needs. Our team specializes in custom software that drives efficiency and growth.',
     icon: Code,
-    color: 'bg-blue-600',
+    accent: 'border-sky-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(56,189,248,0.24)]',
+    iconBg: 'from-sky-500 to-cyan-500',
     benefits: ['Custom Software', 'Enterprise Solutions', 'Cloud Integration', 'Legacy Migration'],
-    image: 'https://picsum.photos/seed/software/800/600'
   },
   {
     id: 'web-dev',
     title: 'Web Development',
     description: 'Creating modern, responsive, and SEO-friendly websites that deliver exceptional user experiences. From corporate sites to complex web portals, we cover it all.',
     icon: Globe,
-    color: 'bg-cyan-600',
+    accent: 'border-cyan-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(6,182,212,0.24)]',
+    iconBg: 'from-cyan-500 to-sky-500',
     benefits: ['Responsive Design', 'E-commerce Solutions', 'CMS Integration', 'Web Portals'],
-    image: 'https://picsum.photos/seed/webdev/800/600'
   },
   {
     id: 'app-dev',
     title: 'App Development',
     description: 'Custom mobile applications for iOS and Android with seamless functionality and intuitive design. We turn your app ideas into reality with cutting-edge mobile tech.',
     icon: Smartphone,
-    color: 'bg-indigo-600',
+    accent: 'border-violet-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(139,92,246,0.24)]',
+    iconBg: 'from-violet-500 to-fuchsia-500',
     benefits: ['iOS & Android Apps', 'Cross-Platform Solutions', 'UI/UX Design', 'App Maintenance'],
-    image: 'https://picsum.photos/seed/appdev/800/600'
   },
   {
     id: 'it-consulting',
     title: 'IT Consulting',
     description: 'Expert guidance and strategic planning to help you leverage technology for business success. We help you navigate the digital landscape with confidence.',
     icon: ShieldCheck,
-    color: 'bg-orange-600',
+    accent: 'border-amber-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(245,158,11,0.24)]',
+    iconBg: 'from-amber-500 to-orange-500',
     benefits: ['Digital Strategy', 'Tech Audit', 'Infrastructure Planning', 'Security Consulting'],
-    image: 'https://picsum.photos/seed/consulting/800/600'
   },
   {
     id: 'digital-marketing',
     title: 'Digital Marketing',
     description: 'Strategic online marketing campaigns to enhance your brand visibility and drive conversions. We help you reach your audience where they are.',
     icon: Megaphone,
-    color: 'bg-purple-600',
+    accent: 'border-fuchsia-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(236,72,153,0.24)]',
+    iconBg: 'from-fuchsia-500 to-pink-500',
     benefits: ['Social Media Marketing', 'PPC Campaigns', 'Content Marketing', 'Email Campaigns'],
-    image: 'https://picsum.photos/seed/marketing/800/600'
   },
   {
     id: 'seo',
     title: 'SEO Optimization',
     description: 'Optimizing your digital presence to rank higher on search engines and attract organic traffic. Our data-driven approach ensures long-term visibility.',
     icon: Search,
-    color: 'bg-pink-600',
+    accent: 'border-emerald-500/20',
+    cardGlow: 'hover:shadow-[0_35px_90px_rgba(16,185,129,0.24)]',
+    iconBg: 'from-emerald-500 to-teal-500',
     benefits: ['Keyword Research', 'On-Page SEO', 'Technical SEO', 'Backlink Building'],
-    image: 'https://picsum.photos/seed/seo/800/600'
   }
 ];
 
@@ -117,10 +123,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="group rounded-[2.5rem] border border-white/10 bg-white/5 p-8 shadow-[0_25px_70px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_35px_90px_rgba(79,70,229,0.24)]"
+                className={`group rounded-[2.5rem] border ${service.accent} bg-slate-950/80 p-8 shadow-[0_25px_70px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-2 ${service.cardGlow}`}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-inner">
-                  <div className={`${service.color} flex h-12 w-12 items-center justify-center rounded-3xl text-white shadow-lg`}>
+                <div className={`flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br ${service.iconBg} shadow-inner`}>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-slate-950 text-white shadow-lg">
                     <service.icon className="w-6 h-6" />
                   </div>
                 </div>
