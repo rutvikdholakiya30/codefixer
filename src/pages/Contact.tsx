@@ -58,7 +58,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Call Us</h4>
-                  <p className="text-sm text-muted-foreground">+91 75748 89909</p>
+                  <p className="text-sm text-muted-foreground">+91 7600196034 / 8140428671</p>
                 </div>
               </div>
 
@@ -68,8 +68,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Email Us</h4>
-                  <p className="text-sm text-muted-foreground">hr@techvardha.com</p>
-                  <p className="text-sm text-muted-foreground">contact@techvardha.com</p>
+                  <p className="text-sm text-muted-foreground">codefixer@gmail.com</p>
+                  <p className="text-sm text-muted-foreground">codefixer@gmail.com</p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-1">Visit Us</h4>
-                  <p className="text-sm text-muted-foreground">133 Green plaza Shopping, Golden City Rd, Mota Varachha, Surat, Gujarat, India 394105</p>
+                  <p className="text-sm text-muted-foreground">211 Silver Empire, Uttran, Surat, (Guj) - 394105</p>
                 </div>
               </div>
 

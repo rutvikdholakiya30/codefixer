@@ -77,7 +77,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Call Us</span>
-                <span className="text-white group-hover:text-primary transition-colors">+91 75748 89909</span>
+                <span className="text-white group-hover:text-primary transition-colors">+91 7600196034 / 8140428671</span>
               </div>
             </li>
             <li className="flex gap-4 group">
@@ -86,7 +86,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Email Us</span>
-                <span className="text-white group-hover:text-primary transition-colors">hr@techvardha.com</span>
+                <span className="text-white group-hover:text-primary transition-colors">codefixer@gmail.com</span>
               </div>
             </li>
             <li className="flex gap-4 group">
@@ -96,7 +96,7 @@ export default function Footer() {
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Visit Us</span>
                 <span className="text-white group-hover:text-primary transition-colors leading-relaxed">
-                  133 Green plaza Shopping, Surat, India
+                  211 Silver Empire, Uttran, Surat, (Guj) - 394105
                 </span>
               </div>
             </li>

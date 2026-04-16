@@ -549,7 +549,7 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">Call Us</p>
-                <p className="text-lg font-bold text-white">+91 75748 89909</p>
+                <p className="text-lg font-bold text-white">+91 7600196034 / 8140428671</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-4 group/item">
@@ -558,7 +558,7 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">Email Us</p>
-                <p className="text-lg font-bold text-white">contact@techvardha.com</p>
+                <p className="text-lg font-bold text-white">codefixer@gmail.com</p>
               </div>
             </div>
           </motion.div>
