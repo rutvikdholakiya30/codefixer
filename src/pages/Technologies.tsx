@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import {
   ArrowRight,
+  Atom,
   Box,
   Cloud,
   Code2,
@@ -28,7 +29,7 @@ const techStack = [
     accent: 'from-sky-500 to-cyan-500',
     color: 'text-sky-300',
     techs: [
-      { name: 'React', icon: Code2 },
+      { name: 'React', icon: Atom },
       { name: 'Angular', icon: Shield },
       { name: 'Vue', icon: Layers },
       { name: 'Next.js', icon: ArrowRight },
@@ -216,7 +217,7 @@ export default function Technologies() {
                 <h3 className={`mt-4 text-2xl font-bold ${item.color}`}>{item.subtitle}</h3>
               </div>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-8 grid gap-3 grid-cols-2 sm:grid-cols-3">
                 {item.techs.map((tech) => (
                   <div
                     key={tech.name}
