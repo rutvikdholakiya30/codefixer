@@ -38,6 +38,7 @@ import {
   Phone
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import VerticalTestimonialMarquee from '../components/ui/VerticalTestimonialMarquee';
 import { Card, CardContent } from '@/components/ui/card';
 
 const services = [
@@ -118,51 +119,6 @@ const processSteps = [
   { number: '04', title: 'Testing & Quality', description: 'Rigorous testing ensures the highest standards of performance and reliability.', icon: ShieldCheck },
   { number: '05', title: 'Launch & Deploy', description: 'Seamless deployment with monitoring and optimization for peak performance.', icon: Rocket },
   { number: '06', title: 'Support & Growth', description: 'Ongoing support and enhancements to ensure continued success.', icon: Headphones },
-];
-
-const testimonials = [
-  {
-    name: 'Mylana',
-    role: 'Pomeranian Scanty Poland • POLAND',
-    content: 'Highly recommend CodeFixer IT Solutions! They are extremely detail-oriented and super skillful. They delivered everything exactly as promised and even ensured everything was done with precision and professionalism. Thank you for your excellent work!',
-    avatar: 'https://picsum.photos/seed/person1/100/100',
-    rating: 5
-  },
-  {
-    name: 'SK Smisra',
-    role: 'Supervity.ai • INDIA',
-    content: 'I engaged CodeFixer IT Solutions for both frontend development and technical support (React JS / JavaScript). Their team delivered exceptional results, combining strong technical expertise, clean and scalable code, and clear communication throughout the process. They also handled the external technical interview professionally, providing detailed insights and recommendations. Overall, CodeFixer proved to be reliable, skilled, and highly professional in every aspect of the engagement.',
-    avatar: 'https://picsum.photos/seed/person2/100/100',
-    rating: 5
-  },
-  {
-    name: 'Shanthan',
-    role: 'Senior Developer • USA',
-    content: 'I recently hired to help with project. From the start, they were incredibly efficient and professional. They delivered high-quality work ahead of schedule and were very responsive to my questions and feedback. I was particularly impressed with their efficiency, turnaround time, and ability to understand the project requirements quickly. I would definitely recommend for anyone looking for a skilled and reliable developer or team.',
-    avatar: 'https://picsum.photos/seed/person3/100/100',
-    rating: 5
-  },
-  {
-    name: 'Anush',
-    role: 'All Cables • INDIA',
-    content: 'They are wonderful team to work with - especially being available almost most of the time and offering support beyond what I was been requested. Way to go!',
-    avatar: 'https://picsum.photos/seed/person4/100/100',
-    rating: 5
-  },
-  {
-    name: 'Krunal J.',
-    role: 'Kodiness IT • INDIA',
-    content: 'Exceptional Team Effort! I\'m truly impressed by the dedication, expertise, and professionalism of the team. Their timely delivery, innovative solutions, and clear communication made the project a great success. Grateful to have worked with such a talented and collaborative team. Rating: 5/5',
-    avatar: 'https://picsum.photos/seed/person5/100/100',
-    rating: 5
-  },
-  {
-    name: 'Syed Jazib',
-    role: 'Microsoft LLC • UAE',
-    content: 'I had the pleasure of working with CodeFixer IT Solutions, an outstanding team. They consistently demonstrated exceptional skill, dedication, and professionalism. Their expertise in both front-end and back-end development, along with their innovative problem-solving abilities, greatly contributed to our project\'s success. I highly recommend CodeFixer IT Solutions for any development.',
-    avatar: 'https://picsum.photos/seed/person6/100/100',
-    rating: 5
-  }
 ];
 
 const containerVariants = {
@@ -443,58 +399,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-6 mb-20">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-black font-heading tracking-tight"
-            >
-              What Our <span className="text-primary">Clients Say</span>
-            </motion.h2>
-            <p className="text-lg text-white/40 max-w-2xl mx-auto font-medium">
-              Real stories from businesses we've helped transform.
-            </p>
-          </div>
-
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {testimonials.map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="break-inside-avoid p-8 glass rounded-3xl border-white/5 hover:border-primary/30 transition-all group"
-              >
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-white/70 text-sm leading-relaxed mb-8 italic">
-                  "{testimonial.content}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name} 
-                    className="w-12 h-12 rounded-full border-2 border-primary/20"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div>
-                    <h4 className="font-bold text-white">{testimonial.name}</h4>
-                    <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">{testimonial.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <VerticalTestimonialMarquee />
 
       {/* CTA Section */}
       <section className="py-24 px-6 relative overflow-hidden">
