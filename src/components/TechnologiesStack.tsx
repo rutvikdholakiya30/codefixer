@@ -66,7 +66,6 @@ const techData = [
     borderColor: "border-t-indigo-500",
     techs: [
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "CI/CD", icon: "https://cdn.jsdelivr.net/gh/USERNAME/REPO/ci-cd.svg" },
       { name: "GitHub Actions", icon: "https://www.vectorlogo.zone/logos/github/github-icon.svg" },
       { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
     ]

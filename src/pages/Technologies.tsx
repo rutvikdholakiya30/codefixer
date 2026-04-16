@@ -66,7 +66,7 @@ export default function Technologies() {
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
               { label: '6 Categories', value: 'Comprehensive coverage' },
-              { label: '29 Technologies', value: 'Proven tools we use' },
+              { label: '26 Technologies', value: 'Proven tools we use' },
               { label: 'Full support', value: 'From design to deployment' }
             ].map((stat) => (
               <motion.div
