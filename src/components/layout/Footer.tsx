@@ -72,7 +72,7 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Contact</h4>
           <ul className="space-y-6 text-sm font-medium">
             <li className="flex gap-4 group">
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <Phone className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
@@ -82,7 +82,7 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex gap-4 group">
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
@@ -91,7 +91,7 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex gap-4 group">
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <MapPin className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
