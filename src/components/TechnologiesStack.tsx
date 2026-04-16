@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import adobeXdIcon from '../static/adobe-xd.svg';
 
 const techData = [
   {
@@ -76,7 +75,7 @@ const techData = [
     borderColor: "border-t-rose-400",
     techs: [
       { name: "Figma", icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
-      { name: "Adobe XD", icon: adobeXdIcon },
+      { name: "Adobe XD", icon: "https://www.vectorlogo.zone/logos/adobe_xd/adobe_xd-icon.svg" },
       { name: "Sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
       { name: "Webflow", icon: "https://www.vectorlogo.zone/logos/webflow/webflow-icon.svg" },
     ]
