@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion'; // નોંધ: જો motion/react ન ચાલે તો framer-motion વાપરજો
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -144,6 +144,7 @@ export default function Contact() {
             allowFullScreen 
             loading="lazy" 
             title="CodeFixer Office Location"
+          ></iframe>
         </div>
       </section>
 
