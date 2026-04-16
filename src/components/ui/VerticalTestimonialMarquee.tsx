@@ -32,14 +32,7 @@ const TestimonialCard = ({ item }: { item: typeof testimonials[0] }) => (
 const MarqueeColumn = ({ items, direction = 'up' }: { items: typeof testimonials, direction?: 'up' | 'down' }) => {
   return (
     <div className="relative h-[800px] overflow-hidden group/column">
-      {/* 
-         Logic: 
-         - animate-marquee-up: scrolls 0 to -50%
-         - animate-marquee-down: scrolls -50% to 0
-         - hover:[animation-play-state:paused]: pauses only the hovered column
-      */}
       <div className={`flex flex-col gap-6 ${direction === 'up' ? 'animate-marquee-up' : 'animate-marquee-down'} group-hover/column:[animation-play-state:paused]`}>
-        {/* Quadruple the items to ensure a perfect infinite loop */}
         {[...items, ...items, ...items, ...items].map((item, idx) => (
           <TestimonialCard key={idx} item={item} />
         ))}
@@ -51,7 +44,6 @@ const MarqueeColumn = ({ items, direction = 'up' }: { items: typeof testimonials
 export default function VerticalTestimonialMarquee() {
   return (
     <section className="relative py-32 px-6 bg-black overflow-hidden">
-      {/* Dynamic Background Gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 blur-[150px] rounded-full" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[150px] rounded-full" />
 
@@ -63,7 +55,7 @@ export default function VerticalTestimonialMarquee() {
             className="text-5xl md:text-8xl font-black text-white tracking-tighter"
           >
             What Our <span className="text-gradient">Clients Say</span>
-          </h2>
+          </motion.h2>
           <motion.p 
              initial={{ opacity: 0 }}
              whileInView={{ opacity: 1 }}
@@ -73,19 +65,12 @@ export default function VerticalTestimonialMarquee() {
           </motion.p>
         </div>
 
-        {/* 3 Columns Layout with Tech Vardha Directions */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-          {/* Top & Bottom Fade Overlays for Smooth Look */}
           <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
-          {/* Column 1: Upwards */}
           <MarqueeColumn items={testimonials} direction="up" />
-          
-          {/* Column 2: Downwards (Tech Vardha Style) */}
           <MarqueeColumn items={testimonials} direction="down" />
-          
-          {/* Column 3: Upwards */}
           <MarqueeColumn items={testimonials} direction="up" />
         </div>
       </div>
