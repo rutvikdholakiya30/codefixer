@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 
+const ADOBE_XD_ICON = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9Ijc4LjkiIGZpbGw9IiMzMTBiMmUiLz4KICA8cGF0aCBkPSJNMjI5LjggMTc4Yy0xLjMtMTctMTAuMy0yNi42LTI2LjEtMjYuNi0xMS40IDAtMTkgNi0yMi4zIDE0LjdIMTgxYzQuNi0yNSAyNC4zLTM5LjcgNTAuNC0zOS43IDM0LjMgMCA1MyAyMy4xIDUzIDYwLjFWMjgxYzAgMzEuOCA0LjYgNDcgMTMuOSA0N2gzLjh2MjIuOGMtMS42LjMtNS4yLjUtOS44LjUtMjMuNyAwLTM1LjktMTUuOC0zNS45LTQyLjJ2LTE3LjdjLTUuNyAxNy43LTIyLjYgMzQuMy00Ni41IDM0LjMtMzMuNyAwLTU0LjctMjMuMS01NC43LTU2LjMgMC00Mi43IDI5LjQtNjYuNCA3NC41LTY2LjR6bS0yLjIgNDZjLTI0LjggMC00MS42IDEyLjMtNDEuNiAzOC40IDAgMTcuMiAxMC4xIDI3LjIgMjcuMiAyNy4yIDIwLjQgMCAzNy44LTE1IDM3LjgtMzguMXYtMjcuNXpNMzg4LjUgMzUxLjNjLTI4LjggMC00OS0xNi4xLTYwLjctMzguNmguNXYzOC42SDI5M1YxMjEuMmgzNC4zVjIxMGMxNC43LTI1LjMgMzYuNy0zOS4xIDYzLjktMzkuMSAzOS40IDAgNjguOCAzMS44IDY4LjggOTEuNHYuM2MwIDU4LjctMjkuNCA4OC43LTcxLjUgODguN3ptLTktMTUyYy0yMy45IDAtNDIuNyAxOC4yLTQyLjcgNTguN3YuM2MwIDQwIDE4LjggNjAuNyA0NC4xIDYwLjcgMjYuOSAwIDQ0LjktMjAuNyA0NC45LTU5Ljh2LjNjLS4xLTM5LjQtMTkuMS01OS42LTQ2LjMtNTkuNnoiIGZpbGw9IiNmZjYxZjYiLz4KPC9zdmc+`;
+
 const techData = [
   {
     category: "Frontend",
@@ -75,7 +77,7 @@ const techData = [
     borderColor: "border-t-rose-400",
     techs: [
       { name: "Figma", icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
-      { name: "Adobe XD", icon: "https://www.vectorlogo.zone/logos/adobe_xd/adobe_xd-icon.svg" },
+      { name: "Adobe XD", icon: ADOBE_XD_ICON },
       { name: "Sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
       { name: "Webflow", icon: "https://www.vectorlogo.zone/logos/webflow/webflow-icon.svg" },
     ]
