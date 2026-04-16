@@ -583,7 +583,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-4xl md:text-6xl font-black font-heading tracking-tight"
+            >
               Stay Updated with <span className="text-primary">CodeFixer</span>
+            </motion.h2>
             <p className="text-white/40 max-w-xl mx-auto font-medium">
               Get the latest tech insights, project updates, and exclusive offers delivered to your inbox.
             </p>
