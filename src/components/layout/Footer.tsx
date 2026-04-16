@@ -71,7 +71,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Contact</h4>
           <ul className="space-y-6 text-sm font-medium">
-            <li className="flex gap-4 group">
+            <li className="flex gap-4 group items-start">
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <Phone className="w-4 h-4" />
               </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <a href="tel:+918140428671" className="text-white group-hover:text-primary transition-colors">+91 8140428671</a>
               </div>
             </li>
-            <li className="flex gap-4 group">
+            <li className="flex gap-4 group items-start">
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <Mail className="w-4 h-4" />
               </div>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <span className="text-white group-hover:text-primary transition-colors">codefixer@gmail.com</span>
               </div>
             </li>
-            <li className="flex gap-4 group">
+            <li className="flex gap-4 group items-start">
               <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
                 <MapPin className="w-4 h-4" />
               </div>
