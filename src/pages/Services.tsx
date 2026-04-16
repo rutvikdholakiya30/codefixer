@@ -151,7 +151,7 @@ export default function Services() {
                     size="lg"
                     className="w-full rounded-full bg-primary text-black shadow-[0_20px_60px_rgba(79,70,229,0.24)] transition hover:bg-primary/90"
                   >
-                    <Link to="/contact" className="inline-flex items-center justify-center gap-3">
+                    <Link to="/contact" className="inline-flex items-center justify-center gap-3 text-white">
                       Inquiry Now
                       <ArrowRight className="w-5 h-5" />
                     </Link>
