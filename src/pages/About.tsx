@@ -1,152 +1,237 @@
 import { motion } from 'motion/react';
-import { Target, Eye, Award, Users2, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Eye, Award, Sparkles, Bolt, ShieldCheck, Users2, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
-const team = [
-  {
-    name: 'Paras Bhatt',
-    role: 'CEO & Founder',
-    image: 'https://picsum.photos/seed/ceo/400/500',
-  },
-  {
-    name: 'Sarah Johnson',
-    role: 'Lead Developer',
-    image: 'https://picsum.photos/seed/dev/400/500',
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Creative Director',
-    image: 'https://picsum.photos/seed/design/400/500',
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Marketing Head',
-    image: 'https://picsum.photos/seed/marketing/400/500',
-  },
+const achievements = [
+  { label: 'Global Clients', value: '50+' },
+  { label: 'Projects Delivered', value: '100+' },
+  { label: 'Client Satisfaction', value: '99%' },
+  { label: 'Years Excellence', value: '4+' },
 ];
 
-const achievements = [
-  { label: 'Projects Completed', value: '500+' },
-  { label: 'Happy Clients', value: '250+' },
-  { label: 'Team Members', value: '50+' },
-  { label: 'Years Experience', value: '10+' },
+const principles = [
+  {
+    title: 'Innovation',
+    description: 'Constantly pushing boundaries with cutting-edge solutions.',
+    icon: Sparkles,
+  },
+  {
+    title: 'Excellence',
+    description: 'Delivering exceptional quality in every project.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Integrity',
+    description: 'Building trust through transparent practices.',
+    icon: Users2,
+  },
+  {
+    title: 'Client Focus',
+    description: 'Prioritizing client success in everything we do.',
+    icon: Bolt,
+  },
 ];
 
 export default function About() {
   return (
     <div className="pb-24">
-      {/* Page Header */}
-      <section className="py-32 px-6 relative overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-blue opacity-30 -z-10" />
-        <div className="max-w-7xl mx-auto relative z-10 space-y-6">
+      <section className="relative overflow-hidden bg-slate-950/80 py-24 px-6 text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.18),_transparent_35%)] opacity-80" />
+        <div className="absolute right-0 top-10 w-72 h-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
+        <div className="relative z-10 mx-auto max-w-5xl space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 text-xs font-bold uppercase tracking-widest"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/80"
           >
-            <Users2 className="w-3.5 h-3.5 text-primary" />
-            <span>About CodeFixer</span>
+            <Users2 className="h-4 w-4 text-primary" />
+            About CodeFixer
           </motion.div>
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black font-heading tracking-tight"
+            className="text-5xl font-black tracking-tight text-white sm:text-6xl md:text-[5.5rem]"
           >
-            Empowering <br />
-            <span className="text-gradient">Digital Journey</span>
+            Transforming Ideas <br />
+            Into Digital Reality
           </motion.h1>
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-white/40 max-w-2xl mx-auto font-medium"
+            className="mx-auto max-w-3xl text-base leading-8 text-white/70 md:text-lg"
           >
-            We are a team of passionate technologists dedicated to transforming businesses through innovative IT solutions.
+            Based in Surat, Gujarat, CodeFixer IT Solutions is a forward-thinking technology company dedicated to transforming businesses through innovative digital solutions.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black shadow-[0_25px_50px_rgba(79,70,229,0.25)] transition hover:bg-primary/90"
+            >
+              Schedule a Meeting
+            </Link>
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              View Our Work
+            </Link>
+          </motion.div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {[
+              'Expert Team',
+              'Fast Delivery',
+              'Quality First',
+              'Innovation',
+            ].map((label) => (
+              <div
+                key={label}
+                className="rounded-3xl border border-white/10 bg-white/5 px-5 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white/80"
+              >
+                {label}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6">
+        <div className="mx-auto max-w-6xl text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm uppercase tracking-[0.35em] text-primary"
+          >
+            Our Impact
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl"
+          >
+            Achievements That Define Excellence
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70"
+          >
+            Every number tells a story of innovation, dedication, and the trust our clients place in us to deliver extraordinary results.
           </motion.p>
         </div>
+
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          {achievements.map((item) => (
+            <motion.div
+              key={item.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-[2rem] border border-white/10 bg-white/5 p-8 text-center shadow-[0_30px_70px_rgba(0,0,0,0.25)]"
+            >
+              <p className="text-5xl font-black text-white">{item.value}</p>
+              <p className="mt-4 text-base font-semibold text-white/80">{item.label}</p>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
-      {/* Company Intro */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+      <section className="py-24 px-6 bg-slate-950/70">
+        <div className="mx-auto max-w-6xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-white/70"
           >
-            <h2 className="text-4xl font-bold font-heading">Our Journey of Innovation</h2>
-              Founded in 2014, CodeFixer started with a simple mission: to help businesses navigate the complex digital landscape with ease. Over the years, we have grown into a full-service IT agency, serving clients across the globe.
-            <p className="text-muted-foreground leading-relaxed">
-              We believe in the power of technology to transform industries and improve lives. Our approach combines technical excellence with creative thinking to deliver results that exceed expectations.
-            </p>
-            <div className="space-y-4">
-              {['Customer Centric Approach', 'Innovation at Core', 'Quality Guaranteed', 'Transparent Communication'].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="text-primary w-5 h-5" />
-                  <span className="font-medium">{item}</span>
+            <Star className="h-3.5 w-3.5 text-primary" />
+            Core Principles
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl"
+          >
+            Values That Define Us
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70"
+          >
+            The foundational principles that shape our work and relationships.
+          </motion.p>
+        </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {principles.map((item) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_25px_55px_rgba(0,0,0,0.22)]"
+              >
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-primary/10 text-primary">
+                  <Icon className="h-6 w-6" />
                 </div>
-              ))}
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <img 
-              src="https://picsum.photos/seed/about/800/600" 
-              alt="Team working" 
-              className="rounded-3xl shadow-2xl"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute -bottom-10 -left-10 glass p-8 rounded-3xl shadow-2xl hidden md:block border-primary/20">
-              <Award className="w-12 h-12 text-primary mb-4" />
-              <p className="text-xl font-bold">Award Winning Agency</p>
-              <p className="text-sm text-muted-foreground">Recognized for excellence in IT</p>
-            </div>
-          </motion.div>
+                <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/70">{item.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-24 px-6 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-glow-purple opacity-20 -z-10" />
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-          <Card className="glass border-none shadow-xl overflow-hidden group">
-            <CardContent className="p-12 space-y-6 relative">
-              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                <Target className="w-32 h-32" />
+      <section className="py-24 px-6">
+        <div className="mx-auto max-w-6xl grid gap-8 lg:grid-cols-2">
+          <Card className="glass border-none shadow-2xl">
+            <CardContent className="p-10">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-primary/10 text-primary">
+                <Target className="h-8 w-8" />
               </div>
-              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white shadow-lg">
-                <Target className="w-8 h-8" />
-              </div>
-              <h3 className="text-3xl font-bold font-heading">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To empower businesses through innovative technology solutions that drive growth, efficiency, and competitive advantage in an ever-evolving digital world.
+              <h3 className="text-3xl font-bold text-white">Our Mission</h3>
+              <p className="mt-4 text-base leading-8 text-white/70">
+                To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation. We bridge the gap between complex technical requirements and user-friendly applications that deliver real business value.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="glass border-none shadow-xl overflow-hidden group">
-            <CardContent className="p-12 space-y-6 relative">
-              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                <Eye className="w-32 h-32" />
+          <Card className="glass border-none shadow-2xl">
+            <CardContent className="p-10">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-cyan-500/10 text-cyan-400">
+                <Eye className="h-8 w-8" />
               </div>
-              <div className="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                <Eye className="w-8 h-8" />
-              </div>
-              <h3 className="text-3xl font-bold font-heading">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To be the global leader in digital transformation, recognized for our creativity, technical prowess, and unwavering commitment to our clients' success.
+              <h3 className="text-3xl font-bold text-white">Our Vision</h3>
+              <p className="mt-4 text-base leading-8 text-white/70">
+                To become the leading IT solutions provider in Gujarat and beyond, known for our technical excellence, innovative approach, and commitment to client success. We aim to be the trusted technology partner for businesses of all sizes.
               </p>
             </CardContent>
           </Card>
         </div>
       </section>
-
     </div>
   );
 }
