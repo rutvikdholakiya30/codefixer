@@ -77,7 +77,8 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Call Us</span>
-                <span className="text-white group-hover:text-primary transition-colors">+91 7600196034 / 8140428671</span>
+                <a href="tel:+917600196034" className="text-white group-hover:text-primary transition-colors mb-1">+91 7600196034</a>
+                <a href="tel:+918140428671" className="text-white group-hover:text-primary transition-colors">+91 8140428671</a>
               </div>
             </li>
             <li className="flex gap-4 group">
