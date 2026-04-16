@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const techData = [
   {
@@ -76,7 +75,7 @@ const techData = [
     borderColor: "border-t-rose-400",
     techs: [
       { name: "Figma", icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
-      { name: "Adobe XD", icon: "https://www.techvardha.com/Images/icons/tech/xd.svg" },
+      { name: "Adobe XD", icon: "/adobe-xd.svg" },
       { name: "Sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
       { name: "Webflow", icon: "https://www.vectorlogo.zone/logos/webflow/webflow-icon.svg" },
     ]
@@ -130,7 +129,7 @@ const TechCard = ({ group }: { group: typeof techData[0] }) => (
   </motion.div>
 );
 
-export default function Technologies() {
+export default function TechnologiesStack() {
   return (
     <section className="bg-black py-24 px-6">
       <div className="max-w-7xl mx-auto">
