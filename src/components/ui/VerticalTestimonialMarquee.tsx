@@ -4,11 +4,11 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   { name: "Anush", role: "Air Cables • INDIA", text: "I recently hired to help with project. From the start, they were incredibly efficient and professional. They delivered high-quality work ahead of schedule." },
-  { name: "Mylana", role: "Pomorskie • POLAND", text: "Highly recommend Tech Vardha IT Solution! The team is extremely detail-oriented and super skillful. They delivered outstanding results." },
+  { name: "Mylana", role: "Pomorskie • POLAND", text: "Highly recommend Codefixer IT Solution! The team is extremely detail-oriented and super skillful. They delivered outstanding results." },
   { name: "Shanthan", role: "Senior Developer • USA", text: "I was particularly impressed with their efficiency, turnaround time, ability to understand the project requirements quickly." },
   { name: "SK Smaira", role: "Dubai City Vision • INDIA", text: "They delivered on time according to our requirement. We have new projects too; we will approach them if they can do on our budget." },
-  { name: "Vimal Bansee", role: "Global Healing • MAURITIUS", text: "I am very happy with the work done by Tech Vardha IT Solution. They are very professional and efficient." },
-  { name: "Dharmendra Kevadiya", role: "Kiara Fine Jewels • INDIA", text: "Working with Tech Vardha IT Solution has been a fantastic experience. They are highly detail-oriented and proactive." }
+  { name: "Vimal Bansee", role: "Global Healing • MAURITIUS", text: "I am very happy with the work done by Codefixer IT Solution. They are very professional and efficient." },
+  { name: "Dharmendra Kevadiya", role: "Kiara Fine Jewels • INDIA", text: "Working with Codefixer IT Solution has been a fantastic experience. They are highly detail-oriented and proactive." }
 ];
 
 const TestimonialCard = ({ item }: { item: typeof testimonials[0] }) => (
