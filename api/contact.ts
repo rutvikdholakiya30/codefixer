@@ -27,13 +27,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const mailOptions = {
-        from: `"Contact Form" <${process.env.SMTP_USER}>`,
-        to: process.env.CONTACT_RECEIVER || 'sumitcode1207@gmail.com',
-        replyTo: email,
-        subject: `New Inquiry: ${subject || 'No Subject'}`,
-        html: `
+      from: `"Contact Form" <${process.env.SMTP_USER}>`,
+      to: process.env.CONTACT_RECEIVER || 'sumitcode1207@gmail.com',
+      replyTo: email,
+      subject: `New Inquiry: ${subject || 'No Subject'}`,
+      html: `
           <div style="font-family: sans-serif; padding: 20px; color: #333;">
-            <h2 style="color: #2563eb;">New Contact Form Submission</h2>
+            <h2 style="color: #2563eb;">New Inquiry: CodeFixer</h2>
             <hr/>
             <p><strong>Full Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
