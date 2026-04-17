@@ -2,17 +2,17 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  showText?: boolean;
 }
 
-export default function Logo({ className, showText = true }: LogoProps) {
+export default function Logo({ className }: LogoProps) {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center", className)}>
       <svg
-        viewBox="0 0 650 120"
+        viewBox="0 0 850 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-auto h-8 md:h-10"
+        className="w-auto h-8 md:h-11"
+        preserveAspectRatio="xMinYMid meet"
       >
         <defs>
           <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -31,45 +31,25 @@ export default function Logo({ className, showText = true }: LogoProps) {
           fill="url(#logo-gradient)"
         />
 
-        {showText && (
-          <>
-            {/* CODEFIX Text */}
-            <text
-              x="110"
-              y="85"
-              fill="url(#logo-gradient)"
-              style={{
-                fontSize: "78px",
-                fontWeight: "900",
-                fontFamily: "Geist, sans-serif",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              CODEFIX
-            </text>
-            
-            {/* ER Text (Purple) */}
-            <text
-              x="445"
-              y="85"
-              fill="url(#text-purple)"
-              style={{
-                fontSize: "78px",
-                fontWeight: "900",
-                fontFamily: "Geist, sans-serif",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              ER
-            </text>
-          </>
-        )}
+        {/* Combined Text */}
+        <text
+          x="110"
+          y="88"
+          style={{
+            fontSize: "82px",
+            fontWeight: "900",
+            fontFamily: "Inter, Poppins, sans-serif",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          <tspan fill="url(#logo-gradient)">CODEFIX</tspan>
+          <tspan fill="url(#text-purple)">ER</tspan>
+        </text>
 
-        {/* Right Icon > */}
+        {/* Right Icon > (Explicitly positioned further right) */}
         <path
-          d="M550 20L605 60L550 100L530 100L585 60L530 20H550Z"
+          d="M740 20L795 60L740 100L720 100L775 60L720 20H740Z"
           fill="url(#logo-gradient)"
-          style={{ transform: !showText ? 'translateX(-440px)' : 'none' }}
         />
       </svg>
     </div>
