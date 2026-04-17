@@ -4,74 +4,70 @@ interface LogoProps {
   className?: string;
 }
 
+import { cn } from "@/lib/utils";
+
+interface LogoProps {
+  className?: string;
+}
+
 export default function Logo({ className }: LogoProps) {
   return (
-    <div className={cn("inline-flex items-center gap-3 md:gap-4 group select-none", className)}>
-      {/* Left Bracket < */}
-      <div className="shrink-0">
-        <svg
-          width="24"
-          height="32"
-          viewBox="0 0 40 50"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-6 md:w-7 md:h-9 transition-transform duration-300 group-hover:-translate-x-1"
-        >
-          <defs>
-            <linearGradient id="bracket-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0047AB" />
-              <stop offset="60%" stopColor="#813AD1" />
-              <stop offset="100%" stopColor="#A020F0" />
-            </linearGradient>
-            <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-              <feOffset dx="0" dy="2" result="offsetblur" />
-              <feComponentTransfer>
-                <feFuncA type="linear" slope="0.3" />
-              </feComponentTransfer>
-              <feMerge>
-                <feMergeNode />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <path
-            d="M38 4L6 25L38 46V36L18 25L38 14V4Z"
-            fill="url(#bracket-grad)"
-          />
-        </svg>
-      </div>
+    <div className={cn("flex items-center", className)}>
+      <svg
+        viewBox="0 0 1000 200"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-full w-auto"
+        preserveAspectRatio="xMinYMid meet"
+      >
+        <defs>
+          <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#0047AB" />
+            <stop offset="100%" stopColor="#A020F0" />
+          </linearGradient>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+            <feOffset dx="0" dy="4" result="offsetblur" />
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.3" />
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
 
-      {/* Text Component */}
-      <div className="flex items-center text-2xl md:text-5xl font-black tracking-normal uppercase font-sans drop-shadow-md">
-        <span 
-          className="bg-clip-text text-transparent"
-          style={{ 
-            WebkitBackgroundClip: 'text',
-            backgroundImage: 'linear-gradient(to right, #0047AB 68%, #A020F0 68%)',
-            filter: 'drop-shadow(0px 2px 3px rgba(0,0,0,0.2))'
+        {/* Left Bracket */}
+        <path
+          d="M120 40L40 100L120 160V140L65 100L120 60V40Z"
+          fill="url(#logo-grad)"
+          filter="url(#shadow)"
+        />
+
+        {/* Text */}
+        <text
+          x="140"
+          y="135"
+          filter="url(#shadow)"
+          style={{
+            fontSize: "120px",
+            fontWeight: "900",
+            fontFamily: "Inter, Poppins, sans-serif",
+            letterSpacing: "-0.02em",
           }}
         >
-          CODEFIXER
-        </span>
-      </div>
+          <tspan fill="#0047AB">CODEFIX</tspan>
+          <tspan fill="#A020F0">ER</tspan>
+        </text>
 
-      {/* Right Bracket > */}
-      <div className="shrink-0">
-        <svg
-          width="24"
-          height="32"
-          viewBox="0 0 40 50"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-6 md:w-7 md:h-9 transition-transform duration-300 group-hover:translate-x-1"
-        >
-          <path
-            d="M2 4L34 25L2 46V36L22 25L2 14V4Z"
-            fill="url(#bracket-grad)"
-          />
-        </svg>
-      </div>
+        {/* Right Bracket */}
+        <path
+          d="M860 40L940 100L860 160V140L915 100L860 60V40Z"
+          fill="url(#logo-grad)"
+          filter="url(#shadow)"
+        />
+      </svg>
     </div>
   );
 }
