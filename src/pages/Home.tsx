@@ -260,7 +260,7 @@ export default function Home() {
                 We are a team of passionate technologists dedicated to transforming businesses through innovative IT solutions.
               </motion.p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {aboutFeatures.map((feature, i) => (
                   <motion.div
                     key={i}
@@ -268,12 +268,12 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-3 p-4 glass rounded-2xl border-white/5 group hover:border-primary/30 transition-all"
+                    className="flex items-center gap-3 p-4 glass rounded-[1.25rem] border-white/5 group hover:border-primary/30 transition-all"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
                       <feature.icon className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-bold text-white/70">{feature.label}</span>
+                    <span className="text-[11px] font-bold text-white/70">{feature.label}</span>
                   </motion.div>
                 ))}
               </div>
@@ -288,30 +288,30 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="p-10 glass rounded-[3rem] border-white/5 space-y-6 relative group overflow-hidden"
+                className="p-8 md:p-10 glass rounded-[2.5rem] md:rounded-[3rem] border-white/5 space-y-6 relative group overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl group-hover:bg-primary/20 transition-all" />
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                  <Target className="w-8 h-8" />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Target className="w-7 h-7 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-3xl font-bold font-heading">Our Mission</h3>
-                <p className="text-white/40 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-bold font-heading uppercase tracking-tighter">Our Mission</h3>
+                <p className="text-white/40 text-sm md:text-base leading-relaxed">
                   To deliver innovative IT solutions that transform businesses and drive digital success.
                 </p>
               </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="p-8 glass rounded-[2.5rem] border-white/5 space-y-4 group"
+                  className="p-8 glass rounded-[2rem] md:rounded-[2.5rem] border-white/5 space-y-4 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-primary transition-colors">
                     <Users className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xl font-bold font-heading">Expert Team</h4>
-                  <p className="text-white/40 text-xs leading-relaxed">
+                  <h4 className="text-lg md:text-xl font-bold font-heading uppercase tracking-tight">Expert Team</h4>
+                  <p className="text-white/40 text-[11px] leading-relaxed">
                     Skilled professionals with extensive experience in modern technologies and frameworks.
                   </p>
                 </motion.div>
@@ -321,13 +321,13 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className="p-8 glass rounded-[2.5rem] border-white/5 space-y-4 group"
+                  className="p-8 glass rounded-[2rem] md:rounded-[2.5rem] border-white/5 space-y-4 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-white/60 group-hover:text-primary transition-colors">
                     <Zap className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xl font-bold font-heading">Innovation</h4>
-                  <p className="text-white/40 text-xs leading-relaxed">
+                  <h4 className="text-lg md:text-xl font-bold font-heading uppercase tracking-tight">Innovation</h4>
+                  <p className="text-white/40 text-[11px] leading-relaxed">
                     We stay ahead of technology trends to provide cutting-edge solutions for our clients.
                   </p>
                 </motion.div>
