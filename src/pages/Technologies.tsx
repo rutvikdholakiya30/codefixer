@@ -28,7 +28,7 @@ const features = [
 export default function Technologies() {
   return (
     <div className="pb-20">
-      <section className="relative overflow-hidden py-20 px-6">
+      <section className="relative overflow-hidden py-16 md:py-20 px-6">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_30%)]" />
         <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-[#9333ea]/10 blur-3xl" />
         <div className="absolute left-0 bottom-10 h-72 w-72 rounded-full bg-[#14b8a6]/10 blur-3xl" />
@@ -86,7 +86,7 @@ export default function Technologies() {
 
       <TechnologiesStack />
 
-      <section className="py-20 px-6 bg-slate-950/90 focus:outline-none">
+      <section className="py-16 md:py-20 px-6 bg-slate-950/90 focus:outline-none">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           <div>
             <motion.div

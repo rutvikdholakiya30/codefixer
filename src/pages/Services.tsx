@@ -81,7 +81,7 @@ export default function Services() {
   return (
     <div className="pb-16">
       {/* Page Header */}
-      <section className="py-20 px-6 relative overflow-hidden text-center">
+      <section className="py-16 md:py-20 px-6 relative overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-blue opacity-30 -z-10" />
         <div className="max-w-7xl mx-auto relative z-10 space-y-6">
           <motion.div

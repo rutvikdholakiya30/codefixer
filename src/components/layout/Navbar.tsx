@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { Sparkles } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Logo from '../ui/Logo';
@@ -15,7 +15,6 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -27,14 +26,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 md:py-4',
         scrolled ? 'glass py-3' : 'bg-transparent'
       )}
     >
@@ -61,63 +56,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <Button asChild className="rounded-full px-6 h-10 bg-primary hover:bg-primary/90 text-white font-bold text-xs shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+        <div className="flex items-center gap-4">
+          <Button asChild className="rounded-full px-5 sm:px-6 h-9 sm:h-10 bg-primary hover:bg-primary/90 text-white font-bold text-[10px] sm:text-xs shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95">
             <Link to="/contact">
-              <Sparkles className="w-3.5 h-3.5 mr-2" />
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1.5 sm:mr-2" />
               Get Quote
             </Link>
           </Button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden p-1 sm:p-2 text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
-        </button>
       </div>
-
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 right-0 glass border-t border-white/10 overflow-hidden md:hidden"
-          >
-            <div className="p-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className={cn(
-                    'text-base font-bold py-4 px-4 rounded-2xl transition-all duration-300 flex items-center justify-between group',
-                    location.pathname === link.href 
-                      ? 'bg-white/5 text-primary' 
-                      : 'text-white/60 hover:text-white hover:bg-white/5'
-                  )}
-                >
-                  <span>{link.name}</span>
-                  {location.pathname === link.href && (
-                    <motion.div layoutId="activeNavMobile" className="w-1.5 h-1.5 rounded-full bg-primary shadow-glow-primary" />
-                  )}
-                </Link>
-              ))}
-              <div className="pt-4 mt-2 border-t border-white/5">
-                <Button asChild className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-bold text-sm shadow-xl shadow-primary/20">
-                  <Link to="/contact">
-                    <Sparkles className="w-4 h-4 mr-2" />
-                    Get Free Quote
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </nav>
   );
 }

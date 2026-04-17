@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       {/* 3. ACHIEVEMENTS SECTION */}
-      <section className="py-24 px-6 border-t border-white/5">
+      <section className="py-16 md:py-24 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
              <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">Our Impact</div>
@@ -107,7 +107,7 @@ export default function About() {
       </section>
 
       {/* 4. TIMELINE SECTION */}
-      <section className="py-24 px-6 bg-white/[0.01]">
+      <section className="py-16 md:py-24 px-6 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><Clock className="w-5 h-5" /></div>
@@ -128,7 +128,7 @@ export default function About() {
       </section>
 
       {/* 5. VALUES SECTION */}
-      <section className="py-24 px-6">
+      <section className="py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-16 justify-center">
             <Award className="text-primary w-6 h-6" />
@@ -147,7 +147,7 @@ export default function About() {
       </section>
 
       {/* 6. MISSION & VISION */}
-      <section className="py-24 px-6 focus:outline-none">
+      <section className="py-16 md:py-24 px-6 focus:outline-none">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[50px] rounded-full group-hover:bg-primary/20 transition-all" />
@@ -165,7 +165,7 @@ export default function About() {
       </section>
 
       {/* 7. EXPERટ TEAM SECTION */}
-      <section className="py-24 px-6">
+      <section className="py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4"><Users className="w-3 h-3"/> Meet Our Team</div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">Expert Team <br/> <span className="text-gradient">Exceptional Results</span></h2>
@@ -185,7 +185,7 @@ export default function About() {
       </section>
 
       {/* 8. ADVANTAGE SECTION */}
-      <section className="py-24 px-6 bg-white/[0.01]">
+      <section className="py-16 md:py-24 px-6 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest mb-4"><Zap className="w-3 h-3"/> Why Choose Us</div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br/> <span className="text-gradient">Advantage</span></h2>
@@ -202,7 +202,7 @@ export default function About() {
       </section>
 
       {/* 9. READY TO TRANSFORM (CTA) */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-16 md:py-24 px-6">
         <div className="max-w-5xl mx-auto p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-primary to-blue-600 text-center space-y-8 relative overflow-hidden shadow-2xl shadow-primary/20">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter relative z-10 leading-tight">Ready To Transform <br className="hidden sm:block"/> Your Vision?</h2>
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* 10. NEWSLETTER / FOOTER TOP */}
-      <section className="py-24 px-6 border-t border-white/5">
+      <section className="py-16 md:py-24 px-6 border-t border-white/5">
         <div className="max-w-xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-bold uppercase tracking-widest"><Send className="w-3 h-3"/> Newsletter</div>
           <h2 className="text-3xl sm:text-4xl font-black">Stay Updated with <span className="text-primary">CodeFixer</span></h2>
