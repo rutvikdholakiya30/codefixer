@@ -4,14 +4,14 @@ import Logo from '../ui/Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] text-white/40 pt-24 pb-12 px-6 relative overflow-hidden border-t border-white/5">
+    <footer className="bg-[#050505] text-white/40 pt-16 md:pt-24 pb-12 px-6 relative overflow-hidden border-t border-white/5">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-blue opacity-10 -z-10" />
       
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-16 md:mb-20">
         {/* Company Info */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           <Link to="/" className="flex items-center gap-2 group">
-            <Logo className="h-8" />
+            <Logo className="h-7 sm:h-8" />
           </Link>
           <p className="text-sm leading-relaxed font-medium">
             Innovative IT solutions for your business growth. We specialize in creating high-performance digital products that drive results.
@@ -27,7 +27,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Company</h4>
+          <h4 className="text-white font-bold mb-6 md:mb-8 font-heading uppercase tracking-widest text-xs">Company</h4>
           <ul className="space-y-4 text-sm font-medium">
             {['About', 'Services', 'Technologies', 'Contact'].map((item) => (
               <li key={item}>
@@ -42,7 +42,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Services</h4>
+          <h4 className="text-white font-bold mb-6 md:mb-8 font-heading uppercase tracking-widest text-xs">Services</h4>
           <ul className="space-y-4 text-sm font-medium">
             {[
               'Artificial Intelligence',
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-white font-bold mb-8 font-heading uppercase tracking-widest text-xs">Contact</h4>
+          <h4 className="text-white font-bold mb-6 md:mb-8 font-heading uppercase tracking-widest text-xs">Contact</h4>
           <ul className="space-y-6 text-sm font-medium">
             <li className="flex gap-4 group items-start">
               <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
@@ -72,8 +72,8 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Call Us</span>
-                <a href="tel:+917600196034" className="text-white group-hover:text-primary transition-colors mb-1">+91 7600196034</a>
-                <a href="tel:+918140428671" className="text-white group-hover:text-primary transition-colors">+91 8140428671</a>
+                <a href="tel:+917600196034" className="text-white group-hover:text-primary transition-colors mb-1 text-xs sm:text-sm font-bold">+91 76001 96034</a>
+                <a href="tel:+918140428671" className="text-white group-hover:text-primary transition-colors text-xs sm:text-sm font-bold">+91 81404 28671</a>
               </div>
             </li>
             <li className="flex gap-4 group items-start">
@@ -82,7 +82,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Email Us</span>
-                <span className="text-white group-hover:text-primary transition-colors">sumitcode1207@gmail.com</span>
+                <span className="text-white group-hover:text-primary transition-colors text-xs sm:text-sm font-bold truncate max-w-[180px] sm:max-w-none">sumitcode1207@gmail.com</span>
               </div>
             </li>
             <li className="flex gap-4 group items-start">
@@ -91,7 +91,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Visit Us</span>
-                <span className="text-white group-hover:text-primary transition-colors leading-relaxed">
+                <span className="text-white group-hover:text-primary transition-colors leading-relaxed text-xs sm:text-sm font-bold">
                   211 Silver Empire, Uttran, Surat, (Guj) - 394105
                 </span>
               </div>
@@ -101,12 +101,12 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="max-w-7xl mx-auto pt-12 border-t border-white/5">
+      <div className="max-w-7xl mx-auto pt-8 md:pt-12 border-t border-white/5">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs font-medium">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
+          <p className="text-[10px] sm:text-xs font-medium text-center md:text-left">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
           <div className="flex gap-8">
-            <Link to="/privacy" className="text-xs font-medium hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-xs font-medium hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="text-[10px] sm:text-xs font-medium hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-[10px] sm:text-xs font-medium hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

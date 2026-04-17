@@ -163,7 +163,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-6xl md:text-8xl font-black font-heading leading-[1.1] tracking-tight"
+            className="text-4xl sm:text-6xl md:text-8xl font-black font-heading leading-[1.1] tracking-tight"
           >
             Transform Your <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -227,7 +227,7 @@ export default function Home() {
       {/* About Us Section */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -244,7 +244,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-5xl md:text-7xl font-black font-heading tracking-tight"
+                className="text-4xl sm:text-5xl md:text-7xl font-black font-heading tracking-tight"
               >
                 Empowering <br />
                 <span className="text-white/90">Your Digital Journey</span>
@@ -356,7 +356,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black font-heading tracking-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-black font-heading tracking-tight"
             >
               From Concept to <br />
               <span className="text-white/90">Reality</span>
@@ -408,7 +408,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black font-heading tracking-tight relative z-10"
+            className="text-4xl sm:text-5xl md:text-7xl font-black font-heading tracking-tight relative z-10"
           >
             Ready to Transform <br />
             <span className="text-gradient">Your Vision?</span>

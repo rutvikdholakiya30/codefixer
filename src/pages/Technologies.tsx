@@ -47,7 +47,7 @@ export default function Technologies() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-8 text-5xl font-black tracking-tight text-white sm:text-6xl md:text-7xl"
+            className="mt-8 text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white"
           >
             Technology Value
             <br />
@@ -58,12 +58,12 @@ export default function Technologies() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg"
+            className="mx-auto mt-6 max-w-3xl text-sm leading-8 text-white/70 md:text-lg"
           >
             Explore the exact technology categories we specialize in, with each stack built for performance, reliability, and business growth.
           </motion.p>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { label: '8 Categories', value: 'Comprehensive coverage' },
               { label: '33 Technologies', value: 'Proven tools we use' },
@@ -86,8 +86,8 @@ export default function Technologies() {
 
       <TechnologiesStack />
 
-      <section className="py-20 px-6 bg-slate-950/90">
-        <div className="max-w-7xl mx-auto grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center">
+      <section className="py-20 px-6 bg-slate-950/90 focus:outline-none">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export default function Technologies() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.05 }}
-              className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl"
+              className="mt-6 text-3xl sm:text-5xl font-black tracking-tight text-white"
             >
               Crafted for speed, security, and scale.
             </motion.h2>
@@ -139,12 +139,12 @@ export default function Technologies() {
         </div>
       </section>
 
-      <section className="py-16 px-6">
-        <div className="mx-auto max-w-7xl rounded-[3rem] border border-white/10 bg-white/5 p-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
-          <div className="grid gap-8 lg:grid-cols-[1.4fr_0.6fr] items-center">
+      <section className="py-16 px-6 focus:outline-none">
+        <div className="mx-auto max-w-7xl rounded-[2.5rem] md:rounded-[3rem] border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-8 items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-primary/90">Ready to build</p>
-              <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-primary/90">Ready to build</p>
+              <h2 className="mt-4 text-3xl sm:text-5xl font-black tracking-tight text-white">
                 Build smarter products with the right stack.
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/70">

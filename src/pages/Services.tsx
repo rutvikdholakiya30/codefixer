@@ -96,7 +96,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black font-heading tracking-tight"
+            className="text-4xl sm:text-6xl md:text-8xl font-black font-heading tracking-tight"
           >
             Innovative <br />
             <span className="text-gradient">IT Solutions</span>
@@ -113,9 +113,9 @@ export default function Services() {
       </section>
 
       {/* Services List */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 focus:outline-none">
         <div className="max-w-7xl mx-auto">
-          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={service.id}

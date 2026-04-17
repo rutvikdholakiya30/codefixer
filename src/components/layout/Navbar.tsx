@@ -83,26 +83,38 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 glass border-t border-white/10 p-6 md:hidden flex flex-col gap-4"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 right-0 glass border-t border-white/10 overflow-hidden md:hidden"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={cn(
-                  'text-lg font-medium py-2 border-b border-white/5',
-                  location.pathname === link.href ? 'text-primary' : 'text-foreground'
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button asChild className="w-full mt-2 rounded-xl">
-              <Link to="/contact">Contact Us</Link>
-            </Button>
+            <div className="p-6 flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    'text-base font-bold py-4 px-4 rounded-2xl transition-all duration-300 flex items-center justify-between group',
+                    location.pathname === link.href 
+                      ? 'bg-white/5 text-primary' 
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
+                  )}
+                >
+                  <span>{link.name}</span>
+                  {location.pathname === link.href && (
+                    <motion.div layoutId="activeNavMobile" className="w-1.5 h-1.5 rounded-full bg-primary shadow-glow-primary" />
+                  )}
+                </Link>
+              ))}
+              <div className="pt-4 mt-2 border-t border-white/5">
+                <Button asChild className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-bold text-sm shadow-xl shadow-primary/20">
+                  <Link to="/contact">
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Get Free Quote
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

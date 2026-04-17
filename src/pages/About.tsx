@@ -62,7 +62,7 @@ export default function About() {
             <Users className="w-3 h-3" /> About CodeFixer
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9]">
+            className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]">
             Transforming Ideas <br /> <span className="text-gradient">Into Digital Reality</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
@@ -91,8 +91,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
              <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">Our Impact</div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Achievements That <br/> Define Excellence</h2>
-            <p className="text-white/40 font-medium">Every number tells a story of innovation and trust.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4">Achievements That <br/> Define Excellence</h2>
+            <p className="text-white/40 font-medium text-sm sm:text-base">Every number tells a story of innovation and trust.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s, i) => (
@@ -111,9 +111,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary"><Clock className="w-5 h-5" /></div>
-            <h2 className="text-4xl font-black tracking-tighter text-gradient">Our Journey Since 2021</h2>
+            <h2 className="text-3xl font-black tracking-tighter text-gradient">Our Journey Since 2021</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-12 relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
             <div className="absolute top-5 left-0 w-full h-px bg-white/10 hidden md:block" />
             {timeline.map((t, i) => (
               <div key={i} className="relative space-y-4">
@@ -132,9 +132,9 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-16 justify-center">
             <Award className="text-primary w-6 h-6" />
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Values That Define Us</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase">Values That Define Us</h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <div key={i} className="p-8 rounded-[2.5rem] bg-white/5 border border-white/5 text-center group hover:bg-white/10 transition-all">
                 <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary group-hover:scale-110 transition-transform"><v.icon /></div>
@@ -147,19 +147,19 @@ export default function About() {
       </section>
 
       {/* 6. MISSION & VISION */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-          <div className="p-12 rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group">
+      <section className="py-24 px-6 focus:outline-none">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[50px] rounded-full group-hover:bg-primary/20 transition-all" />
             <Target className="w-12 h-12 text-primary mb-6" />
-            <h3 className="text-3xl font-black mb-4">Our Mission</h3>
-            <p className="text-white/50 leading-relaxed">To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation.</p>
+            <h3 className="text-2xl md:text-3xl font-black mb-4">Our Mission</h3>
+            <p className="text-white/50 leading-relaxed text-sm md:text-base">To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation.</p>
           </div>
-          <div className="p-12 rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group">
+          <div className="p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/10 blur-[50px] rounded-full group-hover:bg-blue-500/20 transition-all" />
             <Eye className="w-12 h-12 text-blue-500 mb-6" />
-            <h3 className="text-3xl font-black mb-4">Our Vision</h3>
-            <p className="text-white/50 leading-relaxed">To become the leading IT solutions provider globally, known for technical excellence and commitment to client success.</p>
+            <h3 className="text-2xl md:text-3xl font-black mb-4">Our Vision</h3>
+            <p className="text-white/50 leading-relaxed text-sm md:text-base">To become the leading IT solutions provider globally, known for technical excellence and commitment to client success.</p>
           </div>
         </div>
       </section>
@@ -168,7 +168,7 @@ export default function About() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4"><Users className="w-3 h-3"/> Meet Our Team</div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Expert Team <br/> <span className="text-gradient">Exceptional Results</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">Expert Team <br/> <span className="text-gradient">Exceptional Results</span></h2>
         </div>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamRoles.map((role, i) => (
@@ -188,9 +188,9 @@ export default function About() {
       <section className="py-24 px-6 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest mb-4"><Zap className="w-3 h-3"/> Why Choose Us</div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br/> <span className="text-gradient">Advantage</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br/> <span className="text-gradient">Advantage</span></h2>
         </div>
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
           {advantages.map((adv, i) => (
             <div key={i} className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-primary"><adv.icon className="w-6 h-6" /></div>
@@ -202,13 +202,13 @@ export default function About() {
       </section>
 
       {/* 9. READY TO TRANSFORM (CTA) */}
-      <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto p-16 rounded-[4rem] bg-gradient-to-br from-primary to-blue-600 text-center space-y-8 relative overflow-hidden shadow-2xl shadow-primary/20">
+      <section className="py-24 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-primary to-blue-600 text-center space-y-8 relative overflow-hidden shadow-2xl shadow-primary/20">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter relative z-10">Ready To Transform <br/> Your Vision?</h2>
-          <p className="text-white/80 max-w-xl mx-auto font-medium relative z-10 text-lg">Let's collaborate to bring your ideas to life with innovative technology solutions that drive real business results.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter relative z-10 leading-tight">Ready To Transform <br className="hidden sm:block"/> Your Vision?</h2>
+          <p className="text-white/80 max-w-xl mx-auto font-medium relative z-10 text-sm md:text-lg">Let's collaborate to bring your ideas to life with innovative technology solutions that drive real business results.</p>
           <div className="flex justify-center gap-4 relative z-10">
-            <button className="px-10 py-5 bg-white text-black rounded-2xl font-black hover:scale-105 transition-all shadow-xl">Start Your Project</button>
+            <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-black rounded-2xl font-black hover:scale-105 transition-all shadow-xl text-sm md:text-base">Start Your Project</button>
           </div>
         </div>
       </section>
@@ -217,10 +217,10 @@ export default function About() {
       <section className="py-24 px-6 border-t border-white/5">
         <div className="max-w-xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-bold uppercase tracking-widest"><Send className="w-3 h-3"/> Newsletter</div>
-          <h2 className="text-4xl font-black">Stay Updated with <span className="text-primary">CodeFixer</span></h2>
-          <div className="flex gap-2 p-2 bg-white/5 border border-white/5 rounded-2xl">
-            <input type="email" placeholder="Enter your email address" className="bg-transparent border-none outline-none flex-1 px-4 text-sm font-medium" />
-            <button className="px-6 py-3 bg-primary rounded-xl font-bold text-sm">Subscribe</button>
+          <h2 className="text-3xl sm:text-4xl font-black">Stay Updated with <span className="text-primary">CodeFixer</span></h2>
+          <div className="flex flex-col sm:flex-row gap-2 p-2 bg-white/5 border border-white/5 rounded-2xl">
+            <input type="email" placeholder="Enter your email address" className="bg-transparent border-none outline-none flex-1 px-4 py-3 text-sm font-medium" />
+            <button className="px-6 py-4 sm:py-3 bg-primary rounded-xl font-bold text-sm">Subscribe</button>
           </div>
           <div className="flex justify-center gap-8 text-[10px] font-bold text-white/20 uppercase tracking-widest">
             <span>Weekly Tech Insights</span>

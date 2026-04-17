@@ -112,17 +112,17 @@ const TechCard = ({ group }: { group: typeof techData[0] }) => (
       {group.desc}
     </p>
 
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
       {group.techs.map((tech, i) => (
         /* Border Radius set to rounded-lg */
-        <div key={i} className="bg-[#151515] border border-white/5 rounded-lg p-4 flex flex-col items-center justify-center gap-3 aspect-square hover:border-white/20 transition-all group/item cursor-pointer">
+        <div key={i} className="bg-[#151515] border border-white/5 rounded-lg p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 aspect-square hover:border-white/20 transition-all group/item cursor-pointer">
           <img 
             src={tech.icon} 
             alt={tech.name} 
-            className="w-7 h-7 filter grayscale group-hover/item:grayscale-0 group-hover/item:scale-110 transition-all duration-300"
+            className="w-5 h-5 sm:w-7 sm:h-7 filter grayscale group-hover/item:grayscale-0 group-hover/item:scale-110 transition-all duration-300"
           />
           {/* Font size changed to 12px */}
-          <span className="text-[12px] font-bold text-white/20 group-hover/item:text-white uppercase tracking-tighter text-center">
+          <span className="text-[10px] sm:text-[12px] font-bold text-white/20 group-hover/item:text-white uppercase tracking-tighter text-center line-clamp-1">
             {tech.name}
           </span>
         </div>
@@ -133,17 +133,17 @@ const TechCard = ({ group }: { group: typeof techData[0] }) => (
 
 export default function TechnologiesStack() {
   return (
-    <section className="bg-black py-24 px-6">
+    <section className="bg-black py-20 md:py-24 px-6 md:focus:outline-none">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 space-y-4">
+        <div className="text-center mb-16 md:mb-20 space-y-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black text-white tracking-tighter"
+            className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter"
           >
             Our <span className="text-gradient">Tech Stack</span>
           </motion.h2>
-          <p className="text-white/30 max-w-2xl mx-auto text-lg font-medium">
+          <p className="text-white/30 max-w-2xl mx-auto text-base md:text-lg font-medium">
             We use the most advanced tools to build high-quality products.
           </p>
         </div>
