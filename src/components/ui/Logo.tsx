@@ -4,70 +4,68 @@ interface LogoProps {
   className?: string;
 }
 
-import { cn } from "@/lib/utils";
-
-interface LogoProps {
-  className?: string;
-}
-
 export default function Logo({ className }: LogoProps) {
   return (
-    <div className={cn("flex items-center", className)}>
-      <svg
-        viewBox="0 0 1000 200"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-full w-auto"
-        preserveAspectRatio="xMinYMid meet"
-      >
-        <defs>
-          <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0047AB" />
-            <stop offset="100%" stopColor="#A020F0" />
-          </linearGradient>
-          <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
-            <feOffset dx="0" dy="4" result="offsetblur" />
-            <feComponentTransfer>
-              <feFuncA type="linear" slope="0.3" />
-            </feComponentTransfer>
-            <feMerge>
-              <feMergeNode />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        {/* Left Bracket */}
-        <path
-          d="M120 40L40 100L120 160V140L65 100L120 60V40Z"
-          fill="url(#logo-grad)"
-          filter="url(#shadow)"
-        />
-
-        {/* Text */}
-        <text
-          x="140"
-          y="135"
-          filter="url(#shadow)"
-          style={{
-            fontSize: "120px",
-            fontWeight: "900",
-            fontFamily: "Inter, Poppins, sans-serif",
-            letterSpacing: "-0.02em",
-          }}
+    <div className={cn("inline-flex items-center gap-3 md:gap-4 group select-none", className)}>
+      <div className="relative shrink-0">
+        {/* Animated Glow Background */}
+        <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-8 h-8 md:w-10 md:h-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[30deg]"
         >
-          <tspan fill="#0047AB">CODEFIX</tspan>
-          <tspan fill="#A020F0">ER</tspan>
-        </text>
+          <defs>
+            <linearGradient id="premium-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#06b6d4" /> {/* Cyan 500 */}
+              <stop offset="100%" stopColor="#4f46e5" /> {/* Indigo 600 */}
+            </linearGradient>
+            <filter id="icon-glow">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          
+          {/* Hexagon Outer Frame */}
+          <path
+            d="M50 5L89 27.5V72.5L50 95L11 72.5V27.5L50 5Z"
+            stroke="url(#premium-grad)"
+            strokeWidth="6"
+            strokeLinejoin="round"
+          />
+          
+          {/* Inner Circuit Fixer Symbol (Styled X / Screwdriver hint) */}
+          <path
+            d="M35 35L65 65M65 35L35 65"
+            stroke="url(#premium-grad)"
+            strokeWidth="8"
+            strokeLinecap="round"
+          />
+          
+          {/* Connection Points */}
+          <circle cx="35" cy="35" r="4" fill="white" />
+          <circle cx="65" cy="65" r="4" fill="white" />
+          <circle cx="65" cy="35" r="4" fill="white" />
+          <circle cx="35" cy="65" r="4" fill="white" />
+        </svg>
+      </div>
 
-        {/* Right Bracket */}
-        <path
-          d="M860 40L940 100L860 160V140L915 100L860 60V40Z"
-          fill="url(#logo-grad)"
-          filter="url(#shadow)"
-        />
-      </svg>
+      {/* Typography */}
+      <div className="flex flex-col md:flex-row md:items-baseline leading-none">
+        <span className="text-xl md:text-2xl font-medium tracking-tight text-white/90">
+          CODE
+        </span>
+        <span 
+          className="text-xl md:text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#06b6d4] to-[#4f46e5]"
+          style={{ WebkitBackgroundClip: 'text' }}
+        >
+          FIXER
+        </span>
+      </div>
     </div>
   );
 }
