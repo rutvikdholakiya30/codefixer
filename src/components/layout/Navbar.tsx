@@ -4,7 +4,7 @@ import { Menu, X, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import Logo from '@/components/ui/Logo';
+import Logo from '../ui/Logo';
 
 const navLinks = [
   { name: 'Home', href: '/' },

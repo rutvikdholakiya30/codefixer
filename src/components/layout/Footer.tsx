@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import Logo from '@/components/ui/Logo';
+import Logo from '../ui/Logo';
 
 export default function Footer() {
   return (
