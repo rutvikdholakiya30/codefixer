@@ -458,7 +458,7 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">Email Us</p>
-                <p className="text-lg font-bold text-white">codefixer@gmail.com</p>
+                <p className="text-lg font-bold text-white">codefixertech@gmail.com</p>
               </div>
             </div>
           </motion.div>

@@ -82,7 +82,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-white/20 mb-1">Email Us</span>
-                <span className="text-white group-hover:text-primary transition-colors text-xs sm:text-sm font-bold truncate max-w-[180px] sm:max-w-none">sumitcode1207@gmail.com</span>
+                <span className="text-white group-hover:text-primary transition-colors text-xs sm:text-sm font-bold truncate max-w-[180px] sm:max-w-none">codefixertech@gmail.com</span>
               </div>
             </li>
             <li className="flex gap-4 group items-start">
