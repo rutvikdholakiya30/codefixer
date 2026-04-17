@@ -55,7 +55,7 @@ export default function Logo({ className }: LogoProps) {
       </div>
 
       {/* Typography */}
-      <div className="flex flex-col md:flex-row md:items-baseline leading-none">
+      <div className="flex flex-row items-center gap-1.5 md:items-baseline md:gap-2 leading-none">
         <span className="text-xl md:text-2xl font-medium tracking-tight text-white/90">
           CODE
         </span>
