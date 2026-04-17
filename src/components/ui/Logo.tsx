@@ -31,18 +31,15 @@ export default function Logo({ className }: LogoProps) {
       </div>
 
       {/* Text Component */}
-      <div className="flex items-center text-xl md:text-3xl font-black tracking-tighter uppercase font-sans italic">
+      <div className="flex items-center text-xl md:text-3xl font-black tracking-tighter uppercase font-sans italic whitespace-nowrap shrink-0">
         <span 
-          className="bg-clip-text text-transparent bg-gradient-to-r from-[#1D4ED8] to-[#6366F1]"
-          style={{ WebkitBackgroundClip: 'text' }}
+          className="bg-clip-text text-transparent bg-gradient-to-r from-[#1D4ED8] via-[#1D4ED8] via-[#8B5CF6] to-[#D946EF]"
+          style={{ 
+            WebkitBackgroundClip: 'text',
+            backgroundImage: 'linear-gradient(to right, #1D4ED8 70%, #8B5CF6 70%)' 
+          }}
         >
-          CODEFIX
-        </span>
-        <span 
-          className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#D946EF]"
-          style={{ WebkitBackgroundClip: 'text' }}
-        >
-          ER
+          CODEFIXER
         </span>
       </div>
 
