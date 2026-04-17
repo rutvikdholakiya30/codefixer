@@ -9,7 +9,7 @@ export default function Logo({ className, showText = true }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
       <svg
-        viewBox="0 0 500 120"
+        viewBox="0 0 650 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-auto h-8 md:h-10"
@@ -35,14 +35,14 @@ export default function Logo({ className, showText = true }: LogoProps) {
           <>
             {/* CODEFIX Text */}
             <text
-              x="105"
+              x="110"
               y="85"
               fill="url(#logo-gradient)"
               style={{
                 fontSize: "78px",
                 fontWeight: "900",
                 fontFamily: "Geist, sans-serif",
-                letterSpacing: "-0.05em",
+                letterSpacing: "-0.02em",
               }}
             >
               CODEFIX
@@ -50,14 +50,14 @@ export default function Logo({ className, showText = true }: LogoProps) {
             
             {/* ER Text (Purple) */}
             <text
-              x="418"
+              x="445"
               y="85"
               fill="url(#text-purple)"
               style={{
                 fontSize: "78px",
                 fontWeight: "900",
                 fontFamily: "Geist, sans-serif",
-                letterSpacing: "-0.05em",
+                letterSpacing: "-0.02em",
               }}
             >
               ER
@@ -67,10 +67,9 @@ export default function Logo({ className, showText = true }: LogoProps) {
 
         {/* Right Icon > */}
         <path
-          d="M430 20L485 60L430 100L410 100L465 60L410 20H430Z"
+          d="M550 20L605 60L550 100L530 100L585 60L530 20H550Z"
           fill="url(#logo-gradient)"
-          className={!showText ? "translate-x-[-320px]" : ""}
-          style={{ transform: !showText ? 'translateX(-320px)' : 'none' }}
+          style={{ transform: !showText ? 'translateX(-440px)' : 'none' }}
         />
       </svg>
     </div>
