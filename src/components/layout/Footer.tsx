@@ -102,8 +102,8 @@ export default function Footer() {
 
       {/* Footer Bottom Section */}
       <div className="max-w-7xl mx-auto pt-8 md:pt-12 border-t border-white/5">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] sm:text-xs font-medium text-center md:text-left">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+          <p className="text-[10px] sm:text-xs font-medium text-center">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
         </div>
       </div>
     </footer>
