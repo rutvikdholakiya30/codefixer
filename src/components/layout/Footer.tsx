@@ -104,10 +104,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto pt-8 md:pt-12 border-t border-white/5">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] sm:text-xs font-medium text-center md:text-left">&copy; {new Date().getFullYear()} CodeFixer. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link to="/privacy" className="text-[10px] sm:text-xs font-medium hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-[10px] sm:text-xs font-medium hover:text-white transition-colors">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, Zap, Star, Lightbulb, Target, Eye, 
-  ShieldCheck, HeartHandshake, Rocket, Code2, 
+import {
+  Users, Zap, Star, Lightbulb, Target, Eye,
+  ShieldCheck, HeartHandshake, Rocket, Code2,
   Globe2, Smartphone, Cloud, Send, CheckCircle2,
   Clock, Award, BarChart
 } from 'lucide-react';
@@ -25,7 +25,7 @@ const stats = [
 const timeline = [
   { year: "2021", title: "CodeFixer Founded", text: "Started with a vision to provide innovative digital solutions." },
   { year: "2022", title: "Global Expansion", text: "Expanded services to international clients in USA and Europe." },
-  { year: "2024", title: "Leading IT Partner", text: "Now a leading team of 30+ experts serving global brands." },
+  { year: "2023", title: "Leading IT Partner", text: "Now a leading team of 10+ experts serving global brands." },
 ];
 
 const values = [
@@ -52,7 +52,7 @@ const advantages = [
 export default function About() {
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10" />
@@ -90,8 +90,8 @@ export default function About() {
       <section className="py-16 md:py-24 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-             <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">Our Impact</div>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4">Achievements That <br/> Define Excellence</h2>
+            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4">Our Impact</div>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-4">Achievements That <br /> Define Excellence</h2>
             <p className="text-white/40 font-medium text-sm sm:text-base">Every number tells a story of innovation and trust.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -117,7 +117,7 @@ export default function About() {
             <div className="absolute top-5 left-0 w-full h-px bg-white/10 hidden md:block" />
             {timeline.map((t, i) => (
               <div key={i} className="relative space-y-4">
-                <div className="w-10 h-10 rounded-full bg-[#050505] border-4 border-primary flex items-center justify-center font-bold text-xs relative z-10">{i+1}</div>
+                <div className="w-10 h-10 rounded-full bg-[#050505] border-4 border-primary flex items-center justify-center font-bold text-xs relative z-10">{i + 1}</div>
                 <h3 className="text-2xl font-black text-primary">{t.year}</h3>
                 <h4 className="text-lg font-bold">{t.title}</h4>
                 <p className="text-sm text-white/40 leading-relaxed">{t.text}</p>
@@ -167,8 +167,8 @@ export default function About() {
       {/* 7. EXPERટ TEAM SECTION */}
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4"><Users className="w-3 h-3"/> Meet Our Team</div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">Expert Team <br/> <span className="text-gradient">Exceptional Results</span></h2>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-4"><Users className="w-3 h-3" /> Meet Our Team</div>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">Expert Team <br /> <span className="text-gradient">Exceptional Results</span></h2>
         </div>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamRoles.map((role, i) => (
@@ -187,8 +187,8 @@ export default function About() {
       {/* 8. ADVANTAGE SECTION */}
       <section className="py-16 md:py-24 px-6 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest mb-4"><Zap className="w-3 h-3"/> Why Choose Us</div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br/> <span className="text-gradient">Advantage</span></h2>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest mb-4"><Zap className="w-3 h-3" /> Why Choose Us</div>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br /> <span className="text-gradient">Advantage</span></h2>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
           {advantages.map((adv, i) => (
@@ -205,7 +205,7 @@ export default function About() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-5xl mx-auto p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] bg-gradient-to-br from-primary to-blue-600 text-center space-y-8 relative overflow-hidden shadow-2xl shadow-primary/20">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter relative z-10 leading-tight">Ready To Transform <br className="hidden sm:block"/> Your Vision?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter relative z-10 leading-tight">Ready To Transform <br className="hidden sm:block" /> Your Vision?</h2>
           <p className="text-white/80 max-w-xl mx-auto font-medium relative z-10 text-sm md:text-lg">Let's collaborate to bring your ideas to life with innovative technology solutions that drive real business results.</p>
           <div className="flex justify-center gap-4 relative z-10">
             <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-black rounded-2xl font-black hover:scale-105 transition-all shadow-xl text-sm md:text-base">Start Your Project</button>
@@ -216,7 +216,7 @@ export default function About() {
       {/* 10. NEWSLETTER / FOOTER TOP */}
       <section className="py-16 md:py-24 px-6 border-t border-white/5">
         <div className="max-w-xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-bold uppercase tracking-widest"><Send className="w-3 h-3"/> Newsletter</div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-bold uppercase tracking-widest"><Send className="w-3 h-3" /> Newsletter</div>
           <h2 className="text-3xl sm:text-4xl font-black">Stay Updated with <span className="text-primary">CodeFixer</span></h2>
           <div className="flex flex-col sm:flex-row gap-2 p-2 bg-white/5 border border-white/5 rounded-2xl">
             <input type="email" placeholder="Enter your email address" className="bg-transparent border-none outline-none flex-1 px-4 py-3 text-sm font-medium" />
