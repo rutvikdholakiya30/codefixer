@@ -42,7 +42,9 @@ export default function Contact() {
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       } else {
         setStatus('error');
-        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+        // Show specific error details if available
+        setErrorMessage(data.details || data.error || 'Something went wrong. Please try again.');
+        console.error('Submission Error:', data);
       }
     } catch (error) {
       setStatus('error');
