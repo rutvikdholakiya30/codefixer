@@ -6,37 +6,50 @@ interface LogoProps {
 
 export default function Logo({ className }: LogoProps) {
   return (
-    <div className={cn("inline-flex items-center gap-2 md:gap-2.5 group select-none", className)}>
+    <div className={cn("inline-flex items-center gap-3 md:gap-4 group select-none", className)}>
       {/* Left Bracket < */}
       <div className="shrink-0">
         <svg
-          width="18"
-          height="24"
+          width="24"
+          height="32"
           viewBox="0 0 40 50"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-5 md:w-5 md:h-6 transition-transform group-hover:-translate-x-0.5"
+          className="w-5 h-6 md:w-7 md:h-9 transition-transform duration-300 group-hover:-translate-x-1"
         >
           <defs>
             <linearGradient id="bracket-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1D4ED8" />
-              <stop offset="100%" stopColor="#8B5CF6" />
+              <stop offset="0%" stopColor="#0047AB" />
+              <stop offset="60%" stopColor="#813AD1" />
+              <stop offset="100%" stopColor="#A020F0" />
             </linearGradient>
+            <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+              <feOffset dx="0" dy="2" result="offsetblur" />
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3" />
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
           </defs>
           <path
-            d="M35 5L5 25L35 45L40 45L15 25L40 5H35Z"
+            d="M38 4L6 25L38 46V36L18 25L38 14V4Z"
             fill="url(#bracket-grad)"
           />
         </svg>
       </div>
 
       {/* Text Component */}
-      <div className="flex items-center text-xl md:text-3xl font-black tracking-tighter uppercase font-sans italic whitespace-nowrap shrink-0">
+      <div className="flex items-center text-2xl md:text-5xl font-black tracking-normal uppercase font-sans drop-shadow-md">
         <span 
-          className="bg-clip-text text-transparent bg-gradient-to-r from-[#1D4ED8] via-[#1D4ED8] via-[#8B5CF6] to-[#D946EF]"
+          className="bg-clip-text text-transparent"
           style={{ 
             WebkitBackgroundClip: 'text',
-            backgroundImage: 'linear-gradient(to right, #1D4ED8 70%, #8B5CF6 70%)' 
+            backgroundImage: 'linear-gradient(to right, #0047AB 68%, #A020F0 68%)',
+            filter: 'drop-shadow(0px 2px 3px rgba(0,0,0,0.2))'
           }}
         >
           CODEFIXER
@@ -46,15 +59,15 @@ export default function Logo({ className }: LogoProps) {
       {/* Right Bracket > */}
       <div className="shrink-0">
         <svg
-          width="18"
-          height="24"
+          width="24"
+          height="32"
           viewBox="0 0 40 50"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-5 md:w-5 md:h-6 transition-transform group-hover:translate-x-0.5"
+          className="w-5 h-6 md:w-7 md:h-9 transition-transform duration-300 group-hover:translate-x-1"
         >
           <path
-            d="M5 5L35 25L5 45L0 45L25 25L0 5H5Z"
+            d="M2 4L34 25L2 46V36L22 25L2 14V4Z"
             fill="url(#bracket-grad)"
           />
         </svg>
