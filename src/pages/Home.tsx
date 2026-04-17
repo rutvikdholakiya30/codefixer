@@ -140,7 +140,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20 text-center">
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-6 pt-24 pb-12 md:pt-32 md:pb-20 text-center">
         {/* Background Glows */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-[10%] left-[5%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" />
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -338,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-6 mb-20">
             <motion.div
@@ -400,7 +400,7 @@ export default function Home() {
       <VerticalTestimonialMarquee />
 
       {/* CTA Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto p-12 md:p-20 glass rounded-[4rem] border-white/10 text-center space-y-10 relative group">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           
@@ -466,7 +466,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center space-y-12">
           <div className="space-y-4">
             <motion.div
