@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   return (
@@ -10,13 +11,7 @@ export default function Footer() {
         {/* Company Info */}
         <div className="space-y-8">
           <Link to="/" className="flex items-center gap-2 group">
-            <svg width="32" height="26" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary group-hover:scale-110 transition-transform">
-              <path d="M4 4H16M10 4V28" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-              <path d="M24 4L32 28L40 4" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span className="text-2xl font-black tracking-tighter text-white uppercase">
-              Tech <span className="text-primary">Vardha</span>
-            </span>
+            <Logo className="h-8" />
           </Link>
           <p className="text-sm leading-relaxed font-medium">
             Innovative IT solutions for your business growth. We specialize in creating high-performance digital products that drive results.

@@ -23,7 +23,7 @@ const stats = [
 ];
 
 const timeline = [
-  { year: "2021", title: "Tech Vardha Founded", text: "Started with a vision to provide innovative digital solutions." },
+  { year: "2021", title: "CodeFixer Founded", text: "Started with a vision to provide innovative digital solutions." },
   { year: "2022", title: "Global Expansion", text: "Expanded services to international clients in USA and Europe." },
   { year: "2024", title: "Leading IT Partner", text: "Now a leading team of 30+ experts serving global brands." },
 ];
@@ -59,7 +59,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto space-y-8">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-            <Users className="w-3 h-3" /> About Tech Vardha
+            <Users className="w-3 h-3" /> About CodeFixer
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
             className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9]">
@@ -67,7 +67,7 @@ export default function About() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             className="max-w-2xl mx-auto text-white/40 text-lg font-medium">
-            Based in Surat, Gujarat, Tech Vardha IT Solutions is a forward-thinking technology company dedicated to transforming businesses.
+            Based in Surat, Gujarat, CodeFixer IT Solutions is a forward-thinking technology company dedicated to transforming businesses.
           </motion.p>
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <button className="px-8 py-4 bg-primary rounded-2xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all">Schedule a Meeting</button>
@@ -188,7 +188,7 @@ export default function About() {
       <section className="py-24 px-6 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/60 text-[10px] font-bold uppercase tracking-widest mb-4"><Zap className="w-3 h-3"/> Why Choose Us</div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">The Tech Vardha <br/> <span className="text-gradient">Advantage</span></h2>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">The CodeFixer <br/> <span className="text-gradient">Advantage</span></h2>
         </div>
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
           {advantages.map((adv, i) => (
@@ -217,7 +217,7 @@ export default function About() {
       <section className="py-24 px-6 border-t border-white/5">
         <div className="max-w-xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-white/40 text-[10px] font-bold uppercase tracking-widest"><Send className="w-3 h-3"/> Newsletter</div>
-          <h2 className="text-4xl font-black">Stay Updated with <span className="text-primary">Tech Vardha</span></h2>
+          <h2 className="text-4xl font-black">Stay Updated with <span className="text-primary">CodeFixer</span></h2>
           <div className="flex gap-2 p-2 bg-white/5 border border-white/5 rounded-2xl">
             <input type="email" placeholder="Enter your email address" className="bg-transparent border-none outline-none flex-1 px-4 text-sm font-medium" />
             <button className="px-6 py-3 bg-primary rounded-xl font-bold text-sm">Subscribe</button>

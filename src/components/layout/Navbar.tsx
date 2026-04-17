@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles, Phone } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Logo from '@/components/ui/Logo';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -39,16 +40,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="flex items-center gap-2">
-            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-              <path d="M4 4H16M10 4V28" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-              <path d="M24 4L32 28L40 4" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <div className="flex flex-col leading-none">
-              <span className="text-[10px] font-bold tracking-[0.2em] text-white/60 uppercase">Tech</span>
-              <span className="text-xl font-black tracking-tighter text-white uppercase">Vardha</span>
-            </div>
-          </div>
+          <Logo className="h-10" />
         </Link>
 
         {/* Desktop Nav */}

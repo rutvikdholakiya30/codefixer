@@ -1,11 +1,55 @@
-import { motion } from 'framer-motion'; // નોંધ: જો motion/react ન ચાલે તો framer-motion વાપરજો
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion'; 
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+        setErrorMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage('Failed to connect to the server. Please check your internet.');
+    }
+  };
+
   return (
     <div className="pb-24">
       {/* Page Header */}
@@ -69,7 +113,6 @@ export default function Contact() {
                 <div>
                   <h4 className="font-bold mb-1">Email Us</h4>
                   <p className="text-sm text-muted-foreground">codefixer@gmail.com</p>
-                  <p className="text-sm text-muted-foreground">codefixer@gmail.com</p>
                 </div>
               </div>
 
@@ -99,34 +142,101 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card className="glass border-none shadow-2xl rounded-[2.5rem] overflow-hidden">
-              <CardContent className="p-8 md:p-12 space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold ml-1">Full Name</label>
-                    <Input placeholder="John Doe" className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold ml-1">Email Address</label>
-                    <Input type="email" placeholder="john@example.com" className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all" />
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold ml-1">Phone Number</label>
-                    <Input placeholder="+91 00000 00000" className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold ml-1">Subject</label>
-                    <Input placeholder="Project Inquiry" className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold ml-1">Your Message</label>
-                  <Textarea placeholder="Tell us about your project..." className="rounded-3xl min-h-[150px] bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all p-6" />
-                </div>
-                <Button size="lg" className="w-full rounded-2xl h-16 text-lg font-bold shadow-xl shadow-primary/20">
-                  Send Message <Send className="ml-2 w-5 h-5" />
-                </Button>
+              <CardContent className="p-8 md:p-12">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  {status === 'success' ? (
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="p-8 text-center space-y-4 bg-green-500/10 rounded-3xl border border-green-500/20"
+                    >
+                      <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto" />
+                      <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
+                      <p className="text-white/60">Thank you for reaching out. We'll get back to you soon.</p>
+                      <Button type="button" variant="outline" onClick={() => setStatus('idle')} className="rounded-xl border-white/10 hover:bg-white/5">Send Another Message</Button>
+                    </motion.div>
+                  ) : (
+                    <>
+                      {status === 'error' && (
+                        <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-2xl flex items-center gap-3 text-red-500 text-sm">
+                          <AlertCircle className="w-5 h-5" />
+                          {errorMessage}
+                        </div>
+                      )}
+                      
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold ml-1">Full Name</label>
+                          <Input 
+                            id="name"
+                            required
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder="John Doe" 
+                            className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all text-white" 
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold ml-1">Email Address</label>
+                          <Input 
+                            id="email"
+                            type="email" 
+                            required
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            placeholder="john@example.com" 
+                            className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all text-white" 
+                          />
+                        </div>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold ml-1">Phone Number</label>
+                          <Input 
+                            id="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder="+91 00000 00000" 
+                            className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all text-white" 
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-sm font-bold ml-1">Subject</label>
+                          <Input 
+                            id="subject"
+                            value={formData.subject}
+                            onChange={handleInputChange}
+                            placeholder="Project Inquiry" 
+                            className="rounded-2xl h-14 bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all text-white" 
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-bold ml-1">Your Message</label>
+                        <Textarea 
+                          id="message"
+                          required
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          placeholder="Tell us about your project..." 
+                          className="rounded-3xl min-h-[150px] bg-white/5 border-white/10 focus:bg-white/10 focus:border-primary transition-all p-6 text-white" 
+                        />
+                      </div>
+                      <Button 
+                        type="submit"
+                        disabled={status === 'loading'}
+                        size="lg" 
+                        className="w-full rounded-2xl h-16 text-lg font-bold shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-2"
+                      >
+                        {status === 'loading' ? (
+                          <>Sending... <Loader2 className="w-5 h-5 animate-spin" /></>
+                        ) : (
+                          <>Send Message <Send className="w-5 h-5" /></>
+                        )}
+                      </Button>
+                    </>
+                  )}
+                </form>
               </CardContent>
             </Card>
           </div>
