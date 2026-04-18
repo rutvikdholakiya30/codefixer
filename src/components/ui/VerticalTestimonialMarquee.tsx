@@ -6,9 +6,9 @@ const testimonials = [
   { name: "Anush", role: "Air Cables • INDIA", text: "I recently hired to help with project. From the start, they were incredibly efficient and professional. They delivered high-quality work ahead of schedule." },
   { name: "Mylana", role: "Pomorskie • POLAND", text: "Highly recommend Codefixer IT Solution! The team is extremely detail-oriented and super skillful. They delivered outstanding results." },
   { name: "Shanthan", role: "Senior Developer • USA", text: "I was particularly impressed with their efficiency, turnaround time, ability to understand the project requirements quickly." },
-  { name: "SK Smaira", role: "Dubai City Vision • INDIA", text: "They delivered on time according to our requirement. We have new projects too; we will approach them if they can do on our budget." },
+  { name: "Dr.Jignesh Patel", role: "Dr Patel Dental Clinic • INDIA", text: "They delivered on time according to our requirement. We have new projects too; we will approach them if they can do on our budget." },
   { name: "Vimal Bansee", role: "Global Healing • MAURITIUS", text: "I am very happy with the work done by Codefixer IT Solution. They are very professional and efficient." },
-  { name: "Dharmendra Kevadiya", role: "Kiara Fine Jewels • INDIA", text: "Working with Codefixer IT Solution has been a fantastic experience. They are highly detail-oriented and proactive." }
+  { name: "Priyank Vavadiya", role: "Usepay • INDIA", text: "Working with Codefixer IT Solution has been a fantastic experience. They are highly detail-oriented and proactive." }
 ];
 
 const TestimonialCard = ({ item }: { item: typeof testimonials[0] }) => (
@@ -68,10 +68,10 @@ export default function VerticalTestimonialMarquee() {
           >
             What Our <span className="text-gradient">Clients Say</span>
           </motion.h2>
-          <motion.p 
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             className="text-white/40 text-base md:text-lg font-medium"
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-white/40 text-base md:text-lg font-medium"
           >
             Real stories from businesses we've helped transform.
           </motion.p>
@@ -91,10 +91,10 @@ export default function VerticalTestimonialMarquee() {
         <div className="lg:hidden relative">
           <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
           <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
-          
+
           <HorizontalMarquee items={testimonials} />
           <div className="mt-6">
-             <HorizontalMarquee items={[...testimonials].reverse()} />
+            <HorizontalMarquee items={[...testimonials].reverse()} />
           </div>
         </div>
       </div>
@@ -124,4 +124,4 @@ export default function VerticalTestimonialMarquee() {
       `}</style>
     </section>
   );
-}
+}
